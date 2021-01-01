@@ -1,0 +1,145 @@
+<script type="text/javascript">
+function aprichiudi(item) {
+   elem=document.getElementById(item);
+   visibile=(elem.style.display!="none")
+   prefisso=document.getElementById("menu" + item);
+   if (visibile) {
+     elem.style.display="none";
+     prefisso.innerHTML="<img src='images/cartella64.gif' width='16' height='16' hspace='0' vspace='0' border='0'>";
+   } else {
+      elem.style.display="block";
+      prefisso.innerHTML="<img src='images/cartellaaperta64.gif' width='16' height='16' hspace='0' vspace='0' border='0'>";
+   }
+}
+
+function espanditutto() {
+   divs=document.getElementsByTagName("div");
+   for (i=0;i<divs.length;i++) {
+     divs[i].style.display="block";
+     prefisso=document.getElementById("menu" + divs[i].id);
+     prefisso.innerHTML="<img src='images/cartellaaperta64.gif' width='16' height='16' hspace='0' vspace='0' border='0'>";
+   }
+}
+
+function chiuditutto() {
+   divs=document.getElementsByTagName("div");
+   for (i=0;i<divs.length;i++) {
+     divs[i].style.display="none";
+     prefisso=document.getElementById("menu" + divs[i].id);
+     prefisso.innerHTML="<img src='images/cartella64.gif' width='16' height='16' hspace='0' vspace='0' border='0'>";
+   }
+}
+</script>
+
+
+
+<table cellpadding='1' cellspacing='1'>
+<tr>
+<td width='16'>
+<a id="menuguide" href="javascript:aprichiudi('guide');"><img src='images/cartella64.gif' width='16' height='16' hspace='0' vspace='0' border='0'></a>
+</td>
+<td><b>Comando Generale</b></td>
+</table>
+<div id="guide" style="display: none; margin-left: 2em;">
+<table border=0 cellpadding='1' cellspacing='1'>
+<tr>
+<td width='16'><img src='images/documento64.gif' width='16' height='16' hspace='0' vspace='0' border='0'></td>
+<td><a href="mailto:presidenza@guardianazionaleambientale.it">Presidenza</a></td>
+</tr>
+</table>
+<table cellpadding='1' cellspacing='1'>
+<tr>
+<td width='16'><a id="menulaz" href="javascript:aprichiudi('laz');"><img src='images/cartella64.gif' width='16' height='16' hspace='0' vspace='0' border='0'></a></td>
+<td><b>Regione Lazio</b></td>
+</table>
+<div id="laz" style="display: none; margin-left: 2em;">
+<table cellpadding='1' cellspacing='1'>
+<tr>
+<td width='16'><img src='images/documento64.gif' width='16' height='16' hspace='0' vspace='0' border='0'></td>
+<td><a href="mailto:lazio@guardianazionaleambientale.it">Comando Regione Lazio</a></td>
+</tr>
+</table>
+<table cellpadding='1' cellspacing='1'>
+<tr>
+</table>
+<table cellpadding='1' cellspacing='1'>
+<tr>
+<td width='16'><a id="menupvr" href="javascript:aprichiudi('pvr');"><img src='images/cartella64.gif' width='16' height='16' hspace='0' vspace='0' border='0'></a></td>
+<td><b>Provincia di Roma</b></td>
+</table>
+<div id="pvr" style="display: none; margin-left: 2em;">
+<table cellpadding='1' cellspacing='1'>
+<tr>
+<td width='16'><img src='images/documento64.gif' width='16' height='16' hspace='0' vspace='0' border='0'></td>
+<td><a href="mailto:roma@guardianazionaleambientale.it">Comando Provinciale di Roma</a></td>
+</tr>
+</table>
+</div>
+<table cellpadding='1' cellspacing='1'>
+<tr>
+<td width='16'><a id="menupvt" href="javascript:aprichiudi('pvt');"><img src='images/cartella64.gif' width='16' height='16' hspace='0' vspace='0' border='0'></a></td>
+<td><b>Provincia di Rieti</b></td>
+</table>
+<div id="pvt" style="display: none; margin-left: 2em;">
+<table cellpadding='1' cellspacing='1'>
+<tr>
+<td width='16'><img src='images/documento64.gif' width='16' height='16' hspace='0' vspace='0' border='0'></td>
+<td><a href="mailto:rieti@guardianazionaleambientale.it">Comando Provinciale di Rieti</a></td>
+</tr>
+</table>
+</div>
+<table cellpadding='1' cellspacing='1'>
+<tr>
+<td width='16'><a id="menupvl" href="javascript:aprichiudi('pvl');"><img src='images/cartella64.gif' width='16' height='16' hspace='0' vspace='0' border='0'></a></td>
+<td><b>Provincia di Latina</b></td>
+</table>
+<div id="pvl" style="display: none; margin-left: 2em;">
+<table cellpadding='1' cellspacing='1'>
+<tr>
+<td width='16'><img src='images/documento64.gif' width='16' height='16' hspace='0' vspace='0' border='0'></td>
+<td><a href="mailto:latina@guardianazionaleambientale.it">Comando Provinciale di Latina</a></td>
+</tr>
+</table>
+</div>
+<table cellpadding='1' cellspacing='1'>
+<tr>
+<td width='16'><a id="menupvf" href="javascript:aprichiudi('pvf');"><img src='images/cartella64.gif' width='16' height='16' hspace='0' vspace='0' border='0'></a></td>
+<td><b>Provincia di Frosinone</b></td>
+</table>
+<div id="pvf" style="display: none; margin-left: 2em;">
+<table cellpadding='1' cellspacing='1'>
+<tr>
+<td width='16'><img src='images/documento64.gif' width='16' height='16' hspace='0' vspace='0' border='0'></td>
+<td><a href="mailto:frosinone@guardianazionaleambientale.it">Comando Provinciale di Frosinone</a></td>
+</tr>
+</table>
+<table cellpadding='1' cellspacing='1'>
+<tr>
+<td width='16'><img src='images/documento64.gif' width='16' height='16' hspace='0' vspace='0' border='0'></td>
+<td>Via ggggggg, 33 - Ceccano</td>
+</tr>
+</table>
+</div>
+</div>
+<table cellpadding='1' cellspacing='1'>
+<tr>
+<td width='16'><a id="menumbr" href="javascript:aprichiudi('mbr');"><img src='images/cartella64.gif' width='16' height='16' hspace='0' vspace='0' border='0'></a></td>
+<td><b>Regione Umbria</b></td>
+</table>
+<div id="mbr" style="display: none; margin-left: 2em;">
+<table cellpadding='1' cellspacing='1'>
+<tr>
+<td width='16'><img src='images/documento64.gif' width='16' height='16' hspace='0' vspace='0' border='0'></td>
+<td>Via aaaaaaa, 55 - Perugia</td>
+</tr>
+</table>
+<table cellpadding='1' cellspacing='1'>
+<tr>
+<td width='16'><img src='images/documento64.gif' width='16' height='16' hspace='0' vspace='0' border='0'></td>
+<td>Via ggggggg, 33 - Terni</td>
+</tr>
+</table>
+</div>
+<p><a href="javascript:espanditutto();">Espandi Tutto</a><br>
+<a href="javascript:chiuditutto();">Chiudi Tutto</a></p>
+</div>

@@ -1,0 +1,14 @@
+/* CSS Document */
+
+td {background: #990000; color:#ffffff; border: 1px solid #330000;
+ font: bold 8pt Verdana,Arial,Helvetica,sans serif; text-align:center;}
+a {color: #ffffff; text-decoration: none;}
+a:visited {color: #ffffff; text-decoration: none; }
+a:hover {color: #ffffff; text-decoration: underline;}
+
+div {font: 8pt Verdana,Arial,Helvetica,sans serif; position: absolute;}
+  
+.menu {left:-800px; width: 120px; padding:10px; border: 1px dotted #000000; background-color: #ffffff;}
+.menu a {color: #990000; text-decoration: none; }
+.menu a:visited {color: #990000; text-decoration: none; }
+.menu a:hover {color: #990000; text-decoration: underline;}

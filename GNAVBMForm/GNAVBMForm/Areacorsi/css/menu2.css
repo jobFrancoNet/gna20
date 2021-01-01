@@ -1,0 +1,49 @@
+/* CSS Document */
+
+/*------------------------------Inizio menu*/
+	
+#menu{
+	     background:#242c54 url(images/bluedefault.gif) center center repeat-x;
+	     height:30px;
+	     width:950px;
+	      }
+
+#menu ul{
+}
+
+#menu li{
+        position: relative;
+        float: left;
+         list-style: none;
+} 
+
+#menu li a{
+width:150px;
+height: 30px;
+display: block;
+text-decoration:none;
+text-align: center;
+line-height: 30px;
+color: #FFFFFF;
+background:#242c54 url(images/bluedefault.gif) center center repeat-x;
+} 
+
+#menu li a:hover{
+background-color: #0033FF;
+} 
+
+
+
+#menu ul ul{
+position: absolute;
+top: 30px; 
+visibility: hidden;
+} 
+
+#menu ul li:hover ul{
+visibility:visible;
+} 
+		  
+		  	  
+		  
+/*------------------------------fine menu*/

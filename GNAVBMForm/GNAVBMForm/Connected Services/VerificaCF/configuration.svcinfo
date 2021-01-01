@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configurationSnapshot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas-microsoft-com:xml-wcfconfigurationsnapshot">
+  <behaviors />
+  <bindings>
+    <binding digest="System.ServiceModel.Configuration.BasicHttpBindingElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089:&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;Data name=&quot;VerificaCodiceFiscale_iscrittoSoap&quot; /&gt;" bindingType="basicHttpBinding" name="VerificaCodiceFiscale_iscrittoSoap" />
+  </bindings>
+  <endpoints>
+    <endpoint normalizedDigest="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;Data address=&quot;http://localhost:65202/VerificaCF_iscritto.asmx&quot; binding=&quot;basicHttpBinding&quot; bindingConfiguration=&quot;VerificaCodiceFiscale_iscrittoSoap&quot; contract=&quot;VerificaCF.VerificaCodiceFiscale_iscrittoSoap&quot; name=&quot;VerificaCodiceFiscale_iscrittoSoap&quot; /&gt;" digest="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;Data address=&quot;http://localhost:65202/VerificaCF_iscritto.asmx&quot; binding=&quot;basicHttpBinding&quot; bindingConfiguration=&quot;VerificaCodiceFiscale_iscrittoSoap&quot; contract=&quot;VerificaCF.VerificaCodiceFiscale_iscrittoSoap&quot; name=&quot;VerificaCodiceFiscale_iscrittoSoap&quot; /&gt;" contractName="VerificaCF.VerificaCodiceFiscale_iscrittoSoap" name="VerificaCodiceFiscale_iscrittoSoap" />
+  </endpoints>
+</configurationSnapshot>

@@ -1,0 +1,154 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="MasterCorsi.master.vb" Inherits="GNAVBMForm.MasterCorsi" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+<script type="text/javascript" src="javascript/jquery.js"></script>
+
+    <title>Guardia Nazionale Ambientale - Sito Ufficiale</title>
+   
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/it_IT/sdk.js#xfbml=1&version=v2.5";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>   
+ 
+    <asp:ContentPlaceHolder id="head" runat="server">
+
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="wrap">
+	<div id="header">
+	<img src="img/header.png" usemap="#header"/>
+		<map name="header">
+		<area shape="poly" coords="27,27,95,10,163,27,160,105,95,167,35,105" href="http://www.guardianazionaleambientale.eu" alt="Guardia Nazionale Ambientale" title="Guardia Nazionale Ambientale">
+        	<area shape="rect" coords="395,165,765,190" href="documenti/decreto_110_29042016.pdf" target="_blank" alt="Decreto n.110 del 29/04/2016" title="Decreto n.110 del 29/04/2016" />
+        	<area shape="rect" coords="800,110,925,190" href="http://www.minambiente.it" target="_blank" alt="Ministero dell'Ambiente" title="Ministero dell'Ambiente" /> 
+        	</map>
+	</div>
+	<div id="menu-box">
+			<ul id="menu">
+				<li><a href="default.aspx">Home</a></li>
+				<li><a href="">Chi siamo</a>
+					<ul>
+						<li><a href="storia.aspx">Storia</a></li>
+						<li><a href="missione.aspx">Missione</a></li>
+						<li><a href="documenti/regolamento.pdf" target="_blank">Regolamento</a></li> 
+						<li><a href="documenti/statuto.pdf" target="_blank">Statuto</a></li>
+						<li><a href="documenti/organigramma.pdf" target="_blank">Organigramma</a></li>
+						<li><a href="in_costruzione.aspx">Gazzettino</a></li>
+					</ul>
+				</li>
+				<li><a href="dove_siamo.aspx">Dove siamo</a></li>
+				<li><a href="rassegna.aspx">Rassegna stampa</a></li>
+				<li><a href="galleria.aspx">Galleria</a></li>
+				<li><a href="">Per i soci</a>
+					<ul>
+						<li><a href="convenzioni.aspx">Convenzioni</a></li>
+						<li><a href="riservata.aspx">Area riservata</a></li>
+					</ul>
+				</li>
+				<li class="last"><a href="">Contatti</a>
+					<ul>
+						<li><a href="in_costruzione.aspx">Scrivici</a></li>
+						<li><a href="partners.aspx">Partners</a></li>
+						<li><a href="social.aspx">Social</a></li>
+					</ul>
+				</li>
+			</ul>
+	</div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    <div id="footer">
+		<div class="footer-colonna">
+		<ul>
+		<li><a href="default.aspx">Home</a></li>
+		<li>Chi siamo
+			<ul>
+			<li><a href="storia.aspx">Storia</a></li>
+			<li><a href="missione.aspx">Missione</a></li>
+			<li><a href="documenti/regolamento.pdf" target="_blank">Regolamento</a></li> 
+			<li><a href="documenti/statuto.pdf" target="_blank">Statuto</a></li>
+			<li><a href="documenti/organigramma.pdf" target="_blank">Organigramma</a></li>
+			<li><a href="in_costruzione.aspx">Gazzettino</a></li>
+			</ul>
+		</li>
+			<li><a href="dove_siamo.aspx">Dove siamo</a></li>
+			<li><a href="rassegna.aspx">Rassegna stampa</a></li>
+			<li><a href="galleria.aspx">Galleria</a></li>
+		<li>Per i soci
+			<ul>
+			<li><a href="convenzioni.aspx">Convenzioni</a></li>
+			<li><a href="riservata.aspx">Area riservata</a></li>
+			</ul>
+		</li>
+		<li>Contatti
+			<ul>
+			<li><a href="in_costruzione.aspx">Scrivici</a></li>
+			<li><a href="partners.aspx">Partners</a></li>
+			<li><a href="social.aspx">Social</a></li>
+			</ul>	
+		</li>
+		</ul>
+		</div>
+		<div class="footer-colonna">
+		<b>Guardia Nazionale Ambientale</b><br/>
+		<br/>
+		Sede Nazionale:<br/>
+		Via Scarpanto 64, 00139 Roma <br/>
+		    Tel.
+		06 40410902 - Fax 06 40410937<br />
+            <br/> 
+		<br/>
+		Uffici di Presidenza:<br/>
+		Via Tre Venezie 162/66, 05100 Terni (TR)<br/>
+		    Via Mincio n. 25 - 05100 Terni (TR)<br />
+            Tel.
+		0744 062106 - 0744 088616<br/>
+		<br/>
+		<br/>
+		<table border="0" style="color: #ffffff; font-size: 13px;">		
+		<tr>
+			<td style="padding-right: 5px;"><a href="http://www.facebook.com/pages/Guardia-Nazionale-Ambientale/247362302048406" target="_blank"><img src="img/icona-fb.png"></a></td>
+			<td style="padding-right: 5px;"><a href="mailto:segreteria@guardianazionaleambientale.eu"><img src="img/icona-mail.png"></a></td>
+		</tr>
+		</table>
+		</div>
+		<div class="footer-colonna">
+		<table border="0" style="color: #ffffff; font-size: 13px;">		
+		<tr>
+			<td>Cerca nel sito:</td>
+		</tr>
+		<tr>
+			<td valign="center"><div id="casella-ricerca"><input type="text" size="25" value="&nbsp;Cerca..." style="color: #808080;"/></div></td>
+			<td style="padding-left: 10px;"><a href="in_costruzione.aspx"><img src="img/icona-cerca.png"></a></td>
+		</tr>
+		</table>
+		<br/>
+		<br/>
+		<a href="http://www.guardianazionaleambientale.eu"><u>www.guardianazionaleambientale.eu</u></a><br/>
+		<br/>
+		Webmaster: <a href="mailto:webmaster@guardianazionaleambientale.eu">Francesco Spalluzzi</a><br/>
+		    Content Manager: Alberto Raggi<br />
+		Webdesign: Francesca Conti<br/>
+		<br/>		
+		Copyright © 2021<br/>
+		Tutti i diritti riservati
+		<br />
+		</div>
+	</div>
+</div>
+    </form>
+</body>
+</html>

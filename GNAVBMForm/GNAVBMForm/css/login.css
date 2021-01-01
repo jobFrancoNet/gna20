@@ -1,0 +1,111 @@
+
+.modulo {
+	margin-right: auto;
+	margin-left: auto;
+    	padding: 15px 15px 20px 15px;
+    	width: 400px;
+	border: 1px solid #a3a3a3;
+    	-moz-border-radius: 40px 10px;
+    	-moz-border-color: #000000; }
+
+.modulo input {
+    margin: 0px 0px 15px 5px;
+    border: 1px solid #a3a3a3;
+    padding: 5px; }
+
+.modulo span {
+    color: #303030;
+    padding-right: 10px;
+    text-align: right;
+    width: 150px;
+    float: left; }
+
+#pulsante-login { 
+	margin-top: 10px;
+	margin-left: 154px; }
+
+#pulsante-registrati { 
+	margin-top: 0px;
+	margin-left: 157px; }
+
+#casella-registrati {
+	margin: 0px 0px 0px 10px;
+	border: 1px solid #a3a3a3;
+	height: 35px;
+	width: 130px; }
+
+#temp { display: none; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*.modulo input[type="submit"]
+{
+    margin-top: 10px;
+    margin-left: 150px;
+    padding: 5px;
+    background-color: #d4c439;
+    width: 100px;
+    cursor: pointer;
+}
+
+h1
+{
+    text-align: center;
+    font-family: Tahoma;
+}
+
+.modulo
+{
+    margin: 0 auto;
+    padding: 40px 0px 20px 0px;
+    width: 400px;
+    background-color: #C0CDDC;
+    -moz-border-radius: 40px 10px;
+    -moz-border-color: #000000;
+}
+
+.modulo input
+{
+    margin: 0px 0px 15px 5px;
+    border: 1px solid #000000;
+    padding: 5px;
+}
+
+.modulo input[type="submit"]
+{
+    margin-top: 10px;
+    margin-left: 180px;
+    padding: 5px;
+    background-color: #FC0;
+    cursor: pointer;
+}
+
+.modulo span
+{
+    font-family: Trebuchet MS;
+    font-size: 1.1em;
+    color: Black;
+    padding-right: 10px;
+    text-align: right;
+    width: 150px;
+    float: left;
+}
+
+*/

@@ -1,0 +1,1905 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{CD8E53D2-B177-494B-AE08-1CEEF98E43D7}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>GNAVBMForm</RootNamespace>
+    <AssemblyName>GNAVBMForm</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>WebForms_Basic.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>WebForms_Basic.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=18.1.1.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <HintPath>..\packages\AjaxControlToolkit.18.1.1\lib\net40\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.Compatibility" />
+    <Reference Include="MySql.Data, Version=6.6.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 6.6.5\Assemblies\v4.0\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.bootstrap">
+      <HintPath>..\packages\AspNet.ScriptManager.bootstrap.3.3.7\lib\net45\AspNet.ScriptManager.bootstrap.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.3.3.1\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.3\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.4\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.4\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.4\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.4\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.4\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.4\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.DiagnosticSource">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.4.1\lib\net45\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.TelemetryCorrelation">
+      <HintPath>..\packages\Microsoft.AspNet.TelemetryCorrelation.1.0.0\lib\net45\Microsoft.AspNet.TelemetryCorrelation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.5.1\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.4.0\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.5.1\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.5.1\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.5.1\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.5.1\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.5.1\lib\net45\Microsoft.AI.Web.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.Routing" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Accet.aspx" />
+    <Content Include="AreaCorsi20\btn_registra_click_procedure.txt" />
+    <Content Include="AreaCorsi20\css\closelabel.gif" />
+    <Content Include="AreaCorsi20\css\corner_left_bottom.gif" />
+    <Content Include="AreaCorsi20\css\corner_left_top.gif" />
+    <Content Include="AreaCorsi20\css\corner_right_bottom.gif" />
+    <Content Include="AreaCorsi20\css\corner_right_top.gif" />
+    <Content Include="AreaCorsi20\css\default.css" />
+    <Content Include="AreaCorsi20\css\droplinebar.css" />
+    <Content Include="AreaCorsi20\css\gna.css" />
+    <Content Include="AreaCorsi20\css\gnacss.css" />
+    <Content Include="AreaCorsi20\css\hold.gif" />
+    <Content Include="AreaCorsi20\css\lightbox.css" />
+    <Content Include="AreaCorsi20\css\lightwindow.css" />
+    <Content Include="AreaCorsi20\css\loading.gif" />
+    <Content Include="AreaCorsi20\css\login.css" />
+    <Content Include="AreaCorsi20\css\main.css" />
+    <Content Include="AreaCorsi20\css\mediaboxAdvBlack.css" />
+    <Content Include="AreaCorsi20\css\menu.css" />
+    <Content Include="AreaCorsi20\css\menu2.css" />
+    <Content Include="AreaCorsi20\css\navigation.css" />
+    <Content Include="AreaCorsi20\css\nextlabel.gif" />
+    <Content Include="AreaCorsi20\css\pix_line_bottom.gif" />
+    <Content Include="AreaCorsi20\css\pix_line_top.gif" />
+    <Content Include="AreaCorsi20\css\prevlabel.gif" />
+    <Content Include="AreaCorsi20\css\printcss.css" />
+    <Content Include="AreaCorsi20\css\shim.gif" />
+    <Content Include="AreaCorsi20\css\skins\aqua\active-bg.gif" />
+    <Content Include="AreaCorsi20\css\skins\aqua\dark-bg.gif" />
+    <Content Include="AreaCorsi20\css\skins\aqua\hover-bg.gif" />
+    <Content Include="AreaCorsi20\css\skins\aqua\menuarrow.gif" />
+    <Content Include="AreaCorsi20\css\skins\aqua\normal-bg.gif" />
+    <Content Include="AreaCorsi20\css\skins\aqua\rowhover-bg.gif" />
+    <Content Include="AreaCorsi20\css\skins\aqua\status-bg.gif" />
+    <Content Include="AreaCorsi20\css\skins\aqua\theme.css" />
+    <Content Include="AreaCorsi20\css\skins\aqua\title-bg.gif" />
+    <Content Include="AreaCorsi20\css\skins\aqua\today-bg.gif" />
+    <Content Include="AreaCorsi20\css\slimbox.css" />
+    <Content Include="AreaCorsi20\css\style.css" />
+    <Content Include="AreaCorsi20\css\wcwsc.js" />
+    <Content Include="AreaCorsi20\css\wz_tooltip.js" />
+    <Content Include="AreaCorsi20\img\5xmille.jpg" />
+    <Content Include="AreaCorsi20\img\Agenti_Agenti_Scelti.jpg" />
+    <Content Include="AreaCorsi20\img\Aspiranti.jpg" />
+    <Content Include="AreaCorsi20\img\bar_blk.gif" />
+    <Content Include="AreaCorsi20\img\bar_wht.gif" />
+    <Content Include="AreaCorsi20\img\bullet.jpg" />
+    <Content Include="AreaCorsi20\img\conv-autoricambi.jpg" />
+    <Content Include="AreaCorsi20\img\conv-carla.png" />
+    <Content Include="AreaCorsi20\img\conv-chianciano.jpg" />
+    <Content Include="AreaCorsi20\img\conv-giardino.png" />
+    <Content Include="AreaCorsi20\img\conv-lucciola.jpg" />
+    <Content Include="AreaCorsi20\img\conv-orsetto.jpg" />
+    <Content Include="AreaCorsi20\img\conv-parenti.jpg" />
+    <Content Include="AreaCorsi20\img\conv-vodafone.jpg" />
+    <Content Include="AreaCorsi20\img\conv_chianciano.jpg" />
+    <Content Include="AreaCorsi20\img\conv_lucciola.jpg" />
+    <Content Include="AreaCorsi20\img\conv_terniautoricambi.png" />
+    <Content Include="AreaCorsi20\img\conv_vodafone.jpg" />
+    <Content Include="AreaCorsi20\img\Dirigenti_Generali.jpg" />
+    <Content Include="AreaCorsi20\img\Dirigenti_Intermedi.jpg" />
+    <Content Include="AreaCorsi20\img\Dirigenti_Nazionali.jpg" />
+    <Content Include="AreaCorsi20\img\Dirigenti_Provinciali.jpg" />
+    <Content Include="AreaCorsi20\img\Dirigenti_Regionali.jpg" />
+    <Content Include="AreaCorsi20\img\esempio_codice.gif" />
+    <Content Include="AreaCorsi20\img\filigrana.jpg" />
+    <Content Include="AreaCorsi20\img\Funzionari.jpg" />
+    <Content Include="AreaCorsi20\img\Funzionari_Capo.jpg" />
+    <Content Include="AreaCorsi20\img\header.png" />
+    <Content Include="AreaCorsi20\img\header_ante30042018.png" />
+    <Content Include="AreaCorsi20\img\header_spalluzzi.png" />
+    <Content Include="AreaCorsi20\img\icona-cerca.png" />
+    <Content Include="AreaCorsi20\img\icona-dwl.png" />
+    <Content Include="AreaCorsi20\img\icona-fb.png" />
+    <Content Include="AreaCorsi20\img\icona-mail.png" />
+    <Content Include="AreaCorsi20\img\icona-news.png" />
+    <Content Include="AreaCorsi20\img\icona-sitemap.png" />
+    <Content Include="AreaCorsi20\img\icons.asp" />
+    <Content Include="AreaCorsi20\img\image003.jpg" />
+    <Content Include="AreaCorsi20\img\image004.jpg" />
+    <Content Include="AreaCorsi20\img\index1.aspx" />
+    <Content Include="AreaCorsi20\img\intestazione_ricevuta_paypal.jpg" />
+    <Content Include="AreaCorsi20\img\intestazione_ricevuta_paypal.png" />
+    <Content Include="AreaCorsi20\img\italia.jpg" />
+    <Content Include="AreaCorsi20\img\logo-acgih-250.png" />
+    <Content Include="AreaCorsi20\img\logo-anppe-250.jpg" />
+    <Content Include="AreaCorsi20\img\logo-confael-250.jpg" />
+    <Content Include="AreaCorsi20\img\logo-consap-250.jpg" />
+    <Content Include="AreaCorsi20\img\logo-jdmolay-250.jpg" />
+    <Content Include="AreaCorsi20\img\logo-nsp-250.jpg" />
+    <Content Include="AreaCorsi20\img\logo-sap-250.jpg" />
+    <Content Include="AreaCorsi20\img\logo-sinappe-250.png" />
+    <Content Include="AreaCorsi20\img\logo-siulp-250.jpg" />
+    <Content Include="AreaCorsi20\img\logo.png" />
+    <Content Include="AreaCorsi20\img\lucchetti.jpg" />
+    <Content Include="AreaCorsi20\img\luc_aperto.png" />
+    <Content Include="AreaCorsi20\img\luc_chiuso.png" />
+    <Content Include="AreaCorsi20\img\pulsante-base.png" />
+    <Content Include="AreaCorsi20\img\pulsante-controllo.png" />
+    <Content Include="AreaCorsi20\img\pulsante-login-lungo.png" />
+    <Content Include="AreaCorsi20\img\pulsante-login.png" />
+    <Content Include="AreaCorsi20\img\pulsante-logout.png" />
+    <Content Include="AreaCorsi20\img\pulsante-registrati.png" />
+    <Content Include="AreaCorsi20\img\pulsante.png" />
+    <Content Include="AreaCorsi20\img\Responsabili_Distaccamento.jpg" />
+    <Content Include="AreaCorsi20\img\Retro rel 2014.jpg" />
+    <Content Include="AreaCorsi20\img\Retro.jpg" />
+    <Content Include="AreaCorsi20\img\Retro_ante09102018.jpg" />
+    <Content Include="AreaCorsi20\img\sezione730.jpg" />
+    <Content Include="AreaCorsi20\img\sfondo-logo.png" />
+    <Content Include="AreaCorsi20\img\sfondo.jpg" />
+    <Content Include="AreaCorsi20\img\Simpatizzanti.jpg" />
+    <Content Include="AreaCorsi20\img\Socio_Benemeriti.jpg" />
+    <Content Include="AreaCorsi20\img\Socio_Junior.jpg" />
+    <Content Include="AreaCorsi20\img\Socio_Ordinario.jpg" />
+    <Content Include="AreaCorsi20\img\Socio_Simpatizzanti.jpg" />
+    <Content Include="AreaCorsi20\img\Socio_Sostenitori.jpg" />
+    <Content Include="AreaCorsi20\img\Sostenitori.jpg" />
+    <Content Include="AreaCorsi20\img\taglie\circ_bacino.png" />
+    <Content Include="AreaCorsi20\img\taglie\circ_collo.png" />
+    <Content Include="AreaCorsi20\img\taglie\circ_testa.png" />
+    <Content Include="AreaCorsi20\img\taglie\circ_torace.png" />
+    <Content Include="AreaCorsi20\img\taglie\circ_vita.png" />
+    <Content Include="AreaCorsi20\img\taglie\circ_vita_stomaco.png" />
+    <Content Include="AreaCorsi20\img\taglie\larg_spalle.png" />
+    <Content Include="AreaCorsi20\img\taglie\lung_cavallo.png" />
+    <Content Include="AreaCorsi20\img\taglie\lung_ext.png" />
+    <Content Include="AreaCorsi20\img\taglie\lung_ginocchio.png" />
+    <Content Include="AreaCorsi20\img\taglie\lung_manica.png" />
+    <Content Include="AreaCorsi20\img\taglie\lung_vita.png" />
+    <Content Include="AreaCorsi20\img\titolo-in-evidenza.png" />
+    <Content Include="AreaCorsi20\img\titolo-iscriviti.png" />
+    <Content Include="AreaCorsi20\img\titolo-news.png" />
+    <Content Include="AreaCorsi20\img\titolo-scopri-gna.png" />
+    <Content Include="AreaCorsi20\img\titolo.png" />
+    <Content Include="AreaCorsi20\img\titolo_old.png" />
+    <Content Include="Areacorsi\btn_registra_click_procedure.txt" />
+    <Content Include="Areacorsi\css\closelabel.gif" />
+    <Content Include="Areacorsi\css\corner_left_bottom.gif" />
+    <Content Include="Areacorsi\css\corner_left_top.gif" />
+    <Content Include="Areacorsi\css\corner_right_bottom.gif" />
+    <Content Include="Areacorsi\css\corner_right_top.gif" />
+    <Content Include="Areacorsi\css\default.css" />
+    <Content Include="Areacorsi\css\droplinebar.css" />
+    <Content Include="Areacorsi\css\gna.css" />
+    <Content Include="Areacorsi\css\gnacss.css" />
+    <Content Include="Areacorsi\css\hold.gif" />
+    <Content Include="Areacorsi\css\lightbox.css" />
+    <Content Include="Areacorsi\css\lightwindow.css" />
+    <Content Include="Areacorsi\css\loading.gif" />
+    <Content Include="Areacorsi\css\login.css" />
+    <Content Include="Areacorsi\css\main.css" />
+    <Content Include="Areacorsi\css\mediaboxAdvBlack.css" />
+    <Content Include="Areacorsi\css\menu.css" />
+    <Content Include="Areacorsi\css\menu2.css" />
+    <Content Include="Areacorsi\css\navigation.css" />
+    <Content Include="Areacorsi\css\nextlabel.gif" />
+    <Content Include="Areacorsi\css\pix_line_bottom.gif" />
+    <Content Include="Areacorsi\css\pix_line_top.gif" />
+    <Content Include="Areacorsi\css\prevlabel.gif" />
+    <Content Include="Areacorsi\css\printcss.css" />
+    <Content Include="Areacorsi\css\shim.gif" />
+    <Content Include="Areacorsi\css\skins\aqua\active-bg.gif" />
+    <Content Include="Areacorsi\css\skins\aqua\dark-bg.gif" />
+    <Content Include="Areacorsi\css\skins\aqua\hover-bg.gif" />
+    <Content Include="Areacorsi\css\skins\aqua\menuarrow.gif" />
+    <Content Include="Areacorsi\css\skins\aqua\normal-bg.gif" />
+    <Content Include="Areacorsi\css\skins\aqua\rowhover-bg.gif" />
+    <Content Include="Areacorsi\css\skins\aqua\status-bg.gif" />
+    <Content Include="Areacorsi\css\skins\aqua\theme.css" />
+    <Content Include="Areacorsi\css\skins\aqua\title-bg.gif" />
+    <Content Include="Areacorsi\css\skins\aqua\today-bg.gif" />
+    <Content Include="Areacorsi\css\slimbox.css" />
+    <Content Include="Areacorsi\css\style.css" />
+    <Content Include="Areacorsi\css\wcwsc.js" />
+    <Content Include="Areacorsi\css\wz_tooltip.js" />
+    <Content Include="Areacorsi\img\5xmille.jpg" />
+    <Content Include="Areacorsi\img\Agenti_Agenti_Scelti.jpg" />
+    <Content Include="Areacorsi\img\Aspiranti.jpg" />
+    <Content Include="Areacorsi\img\bar_blk.gif" />
+    <Content Include="Areacorsi\img\bar_wht.gif" />
+    <Content Include="Areacorsi\img\bullet.jpg" />
+    <Content Include="Areacorsi\img\conv-autoricambi.jpg" />
+    <Content Include="Areacorsi\img\conv-carla.png" />
+    <Content Include="Areacorsi\img\conv-chianciano.jpg" />
+    <Content Include="Areacorsi\img\conv-giardino.png" />
+    <Content Include="Areacorsi\img\conv-lucciola.jpg" />
+    <Content Include="Areacorsi\img\conv-orsetto.jpg" />
+    <Content Include="Areacorsi\img\conv-parenti.jpg" />
+    <Content Include="Areacorsi\img\conv-vodafone.jpg" />
+    <Content Include="Areacorsi\img\conv_chianciano.jpg" />
+    <Content Include="Areacorsi\img\conv_lucciola.jpg" />
+    <Content Include="Areacorsi\img\conv_terniautoricambi.png" />
+    <Content Include="Areacorsi\img\conv_vodafone.jpg" />
+    <Content Include="Areacorsi\img\Dirigenti_Generali.jpg" />
+    <Content Include="Areacorsi\img\Dirigenti_Intermedi.jpg" />
+    <Content Include="Areacorsi\img\Dirigenti_Nazionali.jpg" />
+    <Content Include="Areacorsi\img\Dirigenti_Provinciali.jpg" />
+    <Content Include="Areacorsi\img\Dirigenti_Regionali.jpg" />
+    <Content Include="Areacorsi\img\esempio_codice.gif" />
+    <Content Include="Areacorsi\img\filigrana.jpg" />
+    <Content Include="Areacorsi\img\Funzionari.jpg" />
+    <Content Include="Areacorsi\img\Funzionari_Capo.jpg" />
+    <Content Include="Areacorsi\img\header.png" />
+    <Content Include="Areacorsi\img\header_ante30042018.png" />
+    <Content Include="Areacorsi\img\header_spalluzzi.png" />
+    <Content Include="Areacorsi\img\icona-cerca.png" />
+    <Content Include="Areacorsi\img\icona-dwl.png" />
+    <Content Include="Areacorsi\img\icona-fb.png" />
+    <Content Include="Areacorsi\img\icona-mail.png" />
+    <Content Include="Areacorsi\img\icona-news.png" />
+    <Content Include="Areacorsi\img\icona-sitemap.png" />
+    <Content Include="Areacorsi\img\icons.asp" />
+    <Content Include="Areacorsi\img\image003.jpg" />
+    <Content Include="Areacorsi\img\image004.jpg" />
+    <Content Include="Areacorsi\img\index1.aspx" />
+    <Content Include="Areacorsi\img\intestazione_ricevuta_paypal.jpg" />
+    <Content Include="Areacorsi\img\intestazione_ricevuta_paypal.png" />
+    <Content Include="Areacorsi\img\italia.jpg" />
+    <Content Include="Areacorsi\img\logo-acgih-250.png" />
+    <Content Include="Areacorsi\img\logo-anppe-250.jpg" />
+    <Content Include="Areacorsi\img\logo-confael-250.jpg" />
+    <Content Include="Areacorsi\img\logo-consap-250.jpg" />
+    <Content Include="Areacorsi\img\logo-jdmolay-250.jpg" />
+    <Content Include="Areacorsi\img\logo-nsp-250.jpg" />
+    <Content Include="Areacorsi\img\logo-sap-250.jpg" />
+    <Content Include="Areacorsi\img\logo-sinappe-250.png" />
+    <Content Include="Areacorsi\img\logo-siulp-250.jpg" />
+    <Content Include="Areacorsi\img\logo.png" />
+    <Content Include="Areacorsi\img\lucchetti.jpg" />
+    <Content Include="Areacorsi\img\luc_aperto.png" />
+    <Content Include="Areacorsi\img\luc_chiuso.png" />
+    <Content Include="Areacorsi\img\pulsante-base.png" />
+    <Content Include="Areacorsi\img\pulsante-controllo.png" />
+    <Content Include="Areacorsi\img\pulsante-login-lungo.png" />
+    <Content Include="Areacorsi\img\pulsante-login.png" />
+    <Content Include="Areacorsi\img\pulsante-logout.png" />
+    <Content Include="Areacorsi\img\pulsante-registrati.png" />
+    <Content Include="Areacorsi\img\pulsante.png" />
+    <Content Include="Areacorsi\img\Responsabili_Distaccamento.jpg" />
+    <Content Include="Areacorsi\img\Retro rel 2014.jpg" />
+    <Content Include="Areacorsi\img\Retro.jpg" />
+    <Content Include="Areacorsi\img\Retro_ante09102018.jpg" />
+    <Content Include="Areacorsi\img\sezione730.jpg" />
+    <Content Include="Areacorsi\img\sfondo-logo.png" />
+    <Content Include="Areacorsi\img\sfondo.jpg" />
+    <Content Include="Areacorsi\img\Simpatizzanti.jpg" />
+    <Content Include="Areacorsi\img\Socio_Benemeriti.jpg" />
+    <Content Include="Areacorsi\img\Socio_Junior.jpg" />
+    <Content Include="Areacorsi\img\Socio_Ordinario.jpg" />
+    <Content Include="Areacorsi\img\Socio_Simpatizzanti.jpg" />
+    <Content Include="Areacorsi\img\Socio_Sostenitori.jpg" />
+    <Content Include="Areacorsi\img\Sostenitori.jpg" />
+    <Content Include="Areacorsi\img\taglie\circ_bacino.png" />
+    <Content Include="Areacorsi\img\taglie\circ_collo.png" />
+    <Content Include="Areacorsi\img\taglie\circ_testa.png" />
+    <Content Include="Areacorsi\img\taglie\circ_torace.png" />
+    <Content Include="Areacorsi\img\taglie\circ_vita.png" />
+    <Content Include="Areacorsi\img\taglie\circ_vita_stomaco.png" />
+    <Content Include="Areacorsi\img\taglie\larg_spalle.png" />
+    <Content Include="Areacorsi\img\taglie\lung_cavallo.png" />
+    <Content Include="Areacorsi\img\taglie\lung_ext.png" />
+    <Content Include="Areacorsi\img\taglie\lung_ginocchio.png" />
+    <Content Include="Areacorsi\img\taglie\lung_manica.png" />
+    <Content Include="Areacorsi\img\taglie\lung_vita.png" />
+    <Content Include="Areacorsi\img\titolo-in-evidenza.png" />
+    <Content Include="Areacorsi\img\titolo-iscriviti.png" />
+    <Content Include="Areacorsi\img\titolo-news.png" />
+    <Content Include="Areacorsi\img\titolo-scopri-gna.png" />
+    <Content Include="Areacorsi\img\titolo.png" />
+    <Content Include="Areacorsi\img\titolo_old.png" />
+    <Content Include="compilapdf.aspx" />
+    <None Include="Connected Services\GetCognomSocio\GetinfocognomnomSoci.disco" />
+    <None Include="Connected Services\GetCognomSocio\configuration91.svcinfo" />
+    <None Include="Connected Services\GetCognomSocio\configuration.svcinfo" />
+    <Content Include="Connected Services\GetCognomSocio\GNAVBMForm.GetCognomSocio.GetInfoSociResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\GetCognomSocio\GNAVBMForm.GetCognomSocio.GetInfoUserByIdSocioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\GetCognomSocio\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <Content Include="Connected Services\VerificaCF\GNAVBMForm.VerificaCF.DTOUserSocio.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\VerificaCF\GNAVBMForm.VerificaCF.VerificaCodiceFiscaleIscrittoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\GetCognomSocio\GetinfocognomnomSoci.wsdl" />
+    <None Include="Connected Services\VerificaCF\VerificaCF_iscritto.wsdl" />
+    <None Include="Connected Services\WebServicegna\CalcoloCodiceFiscale.disco" />
+    <None Include="Connected Services\WebServicegna\configuration91.svcinfo" />
+    <None Include="Connected Services\WebServicegna\configuration.svcinfo" />
+    <None Include="Connected Services\VerificaCF\VerificaCF_iscritto.disco" />
+    <None Include="Connected Services\VerificaCF\configuration91.svcinfo" />
+    <None Include="Connected Services\VerificaCF\configuration.svcinfo" />
+    <None Include="Connected Services\VerificaCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <Content Include="Connected Services\WebServicegna\GNAVBMForm.WebServicegna.calcolocodicefiscaleV2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WebServicegna\GNAVBMForm.WebServicegna.codfisc.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\WebServicegna\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="contenuto_moduloA3.aspx" />
+    <Content Include="contenuto_moduloA2.aspx" />
+    <Content Include="contenuto_moduloA1.aspx" />
+    <Content Include="Corsi_Professionali_2019.aspx" />
+    <Content Include="css\closelabel.gif" />
+    <Content Include="css\corner_left_bottom.gif" />
+    <Content Include="css\corner_left_top.gif" />
+    <Content Include="css\corner_right_bottom.gif" />
+    <Content Include="css\corner_right_top.gif" />
+    <Content Include="css\default.css" />
+    <Content Include="css\droplinebar.css" />
+    <Content Include="css\gna.css" />
+    <Content Include="css\gnacss.css" />
+    <Content Include="css\hold.gif" />
+    <Content Include="css\lightbox.css" />
+    <Content Include="css\lightwindow.css" />
+    <Content Include="css\loading.gif" />
+    <Content Include="css\login.css" />
+    <Content Include="css\main.css" />
+    <Content Include="css\mediaboxAdvBlack.css" />
+    <Content Include="css\menu.css" />
+    <Content Include="css\menu2.css" />
+    <Content Include="css\navigation.css" />
+    <Content Include="css\nextlabel.gif" />
+    <Content Include="css\pix_line_bottom.gif" />
+    <Content Include="css\pix_line_top.gif" />
+    <Content Include="css\prevlabel.gif" />
+    <Content Include="css\printcss.css" />
+    <Content Include="css\shim.gif" />
+    <Content Include="css\skins\aqua\active-bg.gif" />
+    <Content Include="css\skins\aqua\dark-bg.gif" />
+    <Content Include="css\skins\aqua\hover-bg.gif" />
+    <Content Include="css\skins\aqua\menuarrow.gif" />
+    <Content Include="css\skins\aqua\normal-bg.gif" />
+    <Content Include="css\skins\aqua\rowhover-bg.gif" />
+    <Content Include="css\skins\aqua\status-bg.gif" />
+    <Content Include="css\skins\aqua\theme.css" />
+    <Content Include="css\skins\aqua\title-bg.gif" />
+    <Content Include="css\skins\aqua\today-bg.gif" />
+    <Content Include="css\slimbox.css" />
+    <Content Include="css\style.css" />
+    <Content Include="css\wcwsc.js" />
+    <Content Include="css\wz_tooltip.js" />
+    <Content Include="Default.aspx" />
+    <Content Include="DetailsPageCorso.aspx" />
+    <Content Include="documenti\5xmille.jpg" />
+    <Content Include="documenti\Agenti_Agenti_Scelti.jpg" />
+    <Content Include="documenti\Aspiranti.jpg" />
+    <Content Include="documenti\bollettino_benemerito.jpg" />
+    <Content Include="documenti\bollettino_compilabile.jpg" />
+    <Content Include="documenti\bollettino_corporate.jpg" />
+    <Content Include="documenti\bollettino_junior.jpg" />
+    <Content Include="documenti\bollettino_nuovo.jpg" />
+    <Content Include="documenti\bollettino_ordinario.jpg" />
+    <Content Include="documenti\bollettino_sostenitori.jpg" />
+    <Content Include="documenti\bullet.jpg" />
+    <Content Include="documenti\conv-autoricambi.jpg" />
+    <Content Include="documenti\conv-chianciano.jpg" />
+    <Content Include="documenti\conv-lucciola.jpg" />
+    <Content Include="documenti\conv-orsetto.jpg" />
+    <Content Include="documenti\conv-parenti.jpg" />
+    <Content Include="documenti\conv-vodafone.jpg" />
+    <Content Include="documenti\conv_chianciano.jpg" />
+    <Content Include="documenti\conv_lucciola.jpg" />
+    <Content Include="documenti\conv_vodafone.jpg" />
+    <Content Include="documenti\Dirigenti_Generali.jpg" />
+    <Content Include="documenti\Dirigenti_Intermedi.jpg" />
+    <Content Include="documenti\Dirigenti_Nazionali.jpg" />
+    <Content Include="documenti\Dirigenti_Provinciali.jpg" />
+    <Content Include="documenti\Dirigenti_Regionali.jpg" />
+    <Content Include="documenti\filigrana.jpg" />
+    <Content Include="documenti\Funzionari.jpg" />
+    <Content Include="documenti\Funzionari_Capo.jpg" />
+    <Content Include="documenti\home_0_1.jpg" />
+    <Content Include="documenti\home_0_2.jpg" />
+    <Content Include="documenti\home_0_3.jpg" />
+    <Content Include="documenti\home_0_4.jpg" />
+    <Content Include="documenti\home_0_5.jpg" />
+    <Content Include="documenti\home_1_1.jpg" />
+    <Content Include="documenti\home_1_2.jpg" />
+    <Content Include="documenti\home_1_3.jpg" />
+    <Content Include="documenti\home_1_4.jpg" />
+    <Content Include="documenti\home_1_5.jpg" />
+    <Content Include="documenti\image003.jpg" />
+    <Content Include="documenti\image004.jpg" />
+    <Content Include="documenti\intestazione_ricevuta_paypal.jpg" />
+    <Content Include="documenti\italia.jpg" />
+    <Content Include="documenti\logo-anppe-250.jpg" />
+    <Content Include="documenti\logo-confael-250.jpg" />
+    <Content Include="documenti\logo-consap-250.jpg" />
+    <Content Include="documenti\logo-jdmolay-250.jpg" />
+    <Content Include="documenti\logo-nsp-250.jpg" />
+    <Content Include="documenti\logo-sap-250.jpg" />
+    <Content Include="documenti\logo-siulp-250.jpg" />
+    <Content Include="documenti\lucchetti.jpg" />
+    <Content Include="documenti\p002_0_1.jpg" />
+    <Content Include="documenti\p002_0_10.jpg" />
+    <Content Include="documenti\p002_0_11.jpg" />
+    <Content Include="documenti\p002_0_12.jpg" />
+    <Content Include="documenti\p002_0_13.jpg" />
+    <Content Include="documenti\p002_0_14.jpg" />
+    <Content Include="documenti\p002_0_15.jpg" />
+    <Content Include="documenti\p002_0_16.jpg" />
+    <Content Include="documenti\p002_0_17.jpg" />
+    <Content Include="documenti\p002_0_18.jpg" />
+    <Content Include="documenti\p002_0_19.jpg" />
+    <Content Include="documenti\p002_0_2.jpg" />
+    <Content Include="documenti\p002_0_20.jpg" />
+    <Content Include="documenti\p002_0_21.jpg" />
+    <Content Include="documenti\p002_0_22.jpg" />
+    <Content Include="documenti\p002_0_23.jpg" />
+    <Content Include="documenti\p002_0_24.jpg" />
+    <Content Include="documenti\p002_0_25.jpg" />
+    <Content Include="documenti\p002_0_26.jpg" />
+    <Content Include="documenti\p002_0_27.jpg" />
+    <Content Include="documenti\p002_0_28.jpg" />
+    <Content Include="documenti\p002_0_29.jpg" />
+    <Content Include="documenti\p002_0_3.jpg" />
+    <Content Include="documenti\p002_0_30.jpg" />
+    <Content Include="documenti\p002_0_31.jpg" />
+    <Content Include="documenti\p002_0_32.jpg" />
+    <Content Include="documenti\p002_0_33.jpg" />
+    <Content Include="documenti\p002_0_4.jpg" />
+    <Content Include="documenti\p002_0_5.jpg" />
+    <Content Include="documenti\p002_0_6.jpg" />
+    <Content Include="documenti\p002_0_7.jpg" />
+    <Content Include="documenti\p002_0_8.jpg" />
+    <Content Include="documenti\p002_0_9.jpg" />
+    <Content Include="documenti\p003_1_1.jpg" />
+    <Content Include="documenti\p003_1_2.jpg" />
+    <Content Include="documenti\p003_1_3.jpg" />
+    <Content Include="documenti\p003_1_4.jpg" />
+    <Content Include="documenti\Responsabili_Distaccamento.jpg" />
+    <Content Include="documenti\Retro rel 2014.jpg" />
+    <Content Include="documenti\Retro.jpg" />
+    <Content Include="documenti\Retro_ante09102018.jpg" />
+    <Content Include="documenti\richiesta_mezzi.jpg" />
+    <Content Include="documenti\sezione730.jpg" />
+    <Content Include="documenti\sfondo.jpg" />
+    <Content Include="documenti\Simpatizzanti.jpg" />
+    <Content Include="documenti\Socio_Benemeriti.jpg" />
+    <Content Include="documenti\Socio_Junior.jpg" />
+    <Content Include="documenti\Socio_Ordinario.jpg" />
+    <Content Include="documenti\Socio_Simpatizzanti.jpg" />
+    <Content Include="documenti\Socio_Sostenitori.jpg" />
+    <Content Include="documenti\Sostenitori.jpg" />
+    <Content Include="documenti\titolo_gna.jpg" />
+    <Content Include="documenti\titolo_gna2.jpg" />
+    <Content Include="documenti\www.guardianazionaleambi...i_bollettino_510002.jpg" />
+    <Content Include="documenti\www.guardianazionaleambientale.eu - vis_socio.jpg" />
+    <Content Include="emailverified.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Global.asax" />
+    <Content Include="images\1v.jpg" />
+    <Content Include="images\accet.jpg" />
+    <Content Include="images\Agenti Appuntati rel 2010.jpg" />
+    <Content Include="images\Agenti2.jpg" />
+    <Content Include="images\ajax-loading.gif" />
+    <Content Include="images\arrow-down.gif" />
+    <Content Include="images\arrow-list.gif" />
+    <Content Include="images\arrow-up.gif" />
+    <Content Include="images\artwork-pattern.png" />
+    <Content Include="images\Aspiranti rel 2010.jpg" />
+    <Content Include="images\Aspiranti2.jpg" />
+    <Content Include="images\assemblea.png" />
+    <Content Include="images\banner.jpg" />
+    <Content Include="images\bar_blk.gif" />
+    <Content Include="images\bar_wht.gif" />
+    <Content Include="images\bck_decen.jpg" />
+    <Content Include="images\bg.jpg" />
+    <Content Include="images\black-70.png" />
+    <Content Include="images\black.png" />
+    <Content Include="images\blueactive.gif" />
+    <Content Include="images\bluedefault.gif" />
+    <Content Include="images\bottom.jpg" />
+    <Content Include="images\Brigadieri rel 2010.jpg" />
+    <Content Include="images\Brigadieri2.jpg" />
+    <Content Include="images\btn_org.png" />
+    <Content Include="images\btn_org_click.png" />
+    <Content Include="images\btn_org_sopra.png" />
+    <Content Include="images\calendar.png" />
+    <Content Include="images\calendarL.gif" />
+    <Content Include="images\Calendar_scheduleHS.png" />
+    <Content Include="images\canvas.asp" />
+    <Content Include="images\cartella64.gif" />
+    <Content Include="images\cartellaaperta64.gif" />
+    <Content Include="images\categories.gif" />
+    <Content Include="images\chat.jpg" />
+    <Content Include="images\chiudi_btn.png" />
+    <Content Include="images\close.gif" />
+    <Content Include="images\closelabel.gif" />
+    <Content Include="images\content.jpg" />
+    <Content Include="images\contentdx.jpg" />
+    <Content Include="images\contentsx.jpg" />
+    <Content Include="images\decennale.jpg" />
+    <Content Include="images\decennale.png" />
+    <Content Include="images\delete.gif" />
+    <Content Include="images\dim_g.jpg" />
+    <Content Include="images\dim_s.jpg" />
+    <Content Include="images\Dirigenti Generali.jpg" />
+    <Content Include="images\Dirigenti Nazionali.jpg" />
+    <Content Include="images\Dirigenti Provinciali rel 2010.jpg" />
+    <Content Include="images\Dirigenti Regionali.jpg" />
+    <Content Include="images\Dirigenti_Generali2.jpg" />
+    <Content Include="images\Dirigenti_Nazionali2.jpg" />
+    <Content Include="images\Dirigenti_Provinciali2.jpg" />
+    <Content Include="images\Dirigenti_Regionali2.jpg" />
+    <Content Include="images\documento64.gif" />
+    <Content Include="images\dodge_viper.jpg" />
+    <Content Include="images\down.gif" />
+    <Content Include="images\edit.gif" />
+    <Content Include="images\espul.jpg" />
+    <Content Include="images\Forest.jpg" />
+    <Content Include="images\giallo.jpg" />
+    <Content Include="images\google.gif" />
+    <Content Include="images\grille.gif" />
+    <Content Include="images\Immagine_013.jpg" />
+    <Content Include="images\intestazione_aff.jpg" />
+    <Content Include="images\italia.gif" />
+    <Content Include="images\italia.jpg" />
+    <Content Include="images\italia0.png" />
+    <Content Include="images\itextsharp.pdfa.dll" />
+    <Content Include="images\loading.gif" />
+    <Content Include="images\login-icon.png" />
+    <Content Include="images\logo.jpg" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\mappa_sito.jpg" />
+    <Content Include="images\marco_brunelli.jpg" />
+    <Content Include="images\Marescialli rel 2010.jpg" />
+    <Content Include="images\Marescialli2.jpg" />
+    <Content Include="images\menu-dark-indicator.png" />
+    <Content Include="images\menu-indicator.png" />
+    <Content Include="images\menu.jpg" />
+    <Content Include="images\movie3.swf" />
+    <Content Include="images\nextlabel.gif" />
+    <Content Include="images\Nuovo documento di testo.txt" />
+    <Content Include="images\P1010388.JPG" />
+    <Content Include="images\pattern_148-70.png" />
+    <Content Include="images\pattern_148.gif" />
+    <Content Include="images\presidente_1.jpg" />
+    <Content Include="images\prevlabel.gif" />
+    <Content Include="images\print.gif" />
+    <Content Include="images\Retro.jpg" />
+    <Content Include="images\Retro_ante_09102018.jpg" />
+    <Content Include="images\richiesta_mezzi.jpg" />
+    <Content Include="images\rosso.jpg" />
+    <Content Include="images\separator-bg.png" />
+    <Content Include="images\Soci Benemeriti.jpg" />
+    <Content Include="images\Soci Junior.jpg" />
+    <Content Include="images\Soci Ordinari.jpg" />
+    <Content Include="images\Soci Simpatizzanti.jpg" />
+    <Content Include="images\Soci Sostenitori.jpg" />
+    <Content Include="images\Soci_Benemeriti2.jpg" />
+    <Content Include="images\Soci_Junior2.jpg" />
+    <Content Include="images\Soci_Ordinari2.jpg" />
+    <Content Include="images\Soci_Simpatizzanti2.jpg" />
+    <Content Include="images\Soci_Sostenitori2.jpg" />
+    <Content Include="images\sosp.jpg" />
+    <Content Include="images\tab-dashboard.png" />
+    <Content Include="images\tbl_socio.jpg" />
+    <Content Include="images\titolo_gna.jpg" />
+    <Content Include="images\titolo_gna2.jpg" />
+    <Content Include="images\titolo_gna_ante25102018.jpg" />
+    <Content Include="images\top.jpg" />
+    <Content Include="images\top.png" />
+    <Content Include="images\trat.jpg" />
+    <Content Include="images\verde.jpg" />
+    <Content Include="img\5xmille.jpg" />
+    <Content Include="img\Agenti_Agenti_Scelti.jpg" />
+    <Content Include="img\Aspiranti.jpg" />
+    <Content Include="img\bar_blk.gif" />
+    <Content Include="img\bar_wht.gif" />
+    <Content Include="img\bullet.jpg" />
+    <Content Include="img\conv-autoricambi.jpg" />
+    <Content Include="img\conv-carla.png" />
+    <Content Include="img\conv-chianciano.jpg" />
+    <Content Include="img\conv-giardino.png" />
+    <Content Include="img\conv-lucciola.jpg" />
+    <Content Include="img\conv-orsetto.jpg" />
+    <Content Include="img\conv-parenti.jpg" />
+    <Content Include="img\conv-vodafone.jpg" />
+    <Content Include="img\conv_chianciano.jpg" />
+    <Content Include="img\conv_lucciola.jpg" />
+    <Content Include="img\conv_terniautoricambi.png" />
+    <Content Include="img\conv_vodafone.jpg" />
+    <Content Include="img\Dirigenti_Generali.jpg" />
+    <Content Include="img\Dirigenti_Intermedi.jpg" />
+    <Content Include="img\Dirigenti_Nazionali.jpg" />
+    <Content Include="img\Dirigenti_Provinciali.jpg" />
+    <Content Include="img\Dirigenti_Regionali.jpg" />
+    <Content Include="img\esempio_codice.gif" />
+    <Content Include="img\filigrana.jpg" />
+    <Content Include="img\Funzionari.jpg" />
+    <Content Include="img\Funzionari_Capo.jpg" />
+    <Content Include="img\header.png" />
+    <Content Include="img\header_ante30042018.png" />
+    <Content Include="img\header_spalluzzi.png" />
+    <Content Include="img\icona-cerca.png" />
+    <Content Include="img\icona-dwl.png" />
+    <Content Include="img\icona-fb.png" />
+    <Content Include="img\icona-mail.png" />
+    <Content Include="img\icona-news.png" />
+    <Content Include="img\icona-sitemap.png" />
+    <Content Include="img\icons.asp" />
+    <Content Include="img\image003.jpg" />
+    <Content Include="img\image004.jpg" />
+    <Content Include="img\index1.aspx" />
+    <Content Include="img\intestazione_ricevuta_paypal.jpg" />
+    <Content Include="img\intestazione_ricevuta_paypal.png" />
+    <Content Include="img\italia.jpg" />
+    <Content Include="img\logo-acgih-250.png" />
+    <Content Include="img\logo-anppe-250.jpg" />
+    <Content Include="img\logo-confael-250.jpg" />
+    <Content Include="img\logo-consap-250.jpg" />
+    <Content Include="img\logo-jdmolay-250.jpg" />
+    <Content Include="img\logo-nsp-250.jpg" />
+    <Content Include="img\logo-sap-250.jpg" />
+    <Content Include="img\logo-sinappe-250.png" />
+    <Content Include="img\logo-siulp-250.jpg" />
+    <Content Include="img\logo.png" />
+    <Content Include="img\lucchetti.jpg" />
+    <Content Include="img\luc_aperto.png" />
+    <Content Include="img\luc_chiuso.png" />
+    <Content Include="img\pulsante-areariservata.png" />
+    <Content Include="img\pulsante-base.png" />
+    <Content Include="img\pulsante-controllo.png" />
+    <Content Include="img\pulsante-invia.png" />
+    <Content Include="img\pulsante-login-lungo.png" />
+    <Content Include="img\pulsante-login.png" />
+    <Content Include="img\pulsante-logout.png" />
+    <Content Include="img\pulsante-Moduli.png" />
+    <Content Include="img\pulsante-recupera.png" />
+    <Content Include="img\pulsante-registrati.png" />
+    <Content Include="img\pulsante-salva.png" />
+    <Content Include="img\pulsante-Verifica.png" />
+    <Content Include="img\pulsante.png" />
+    <Content Include="img\Responsabili_Distaccamento.jpg" />
+    <Content Include="img\Retro rel 2014.jpg" />
+    <Content Include="img\Retro.jpg" />
+    <Content Include="img\Retro_ante09102018.jpg" />
+    <Content Include="img\sezione730.jpg" />
+    <Content Include="img\sfondo-logo.png" />
+    <Content Include="img\sfondo.jpg" />
+    <Content Include="img\Simpatizzanti.jpg" />
+    <Content Include="img\Socio_Benemeriti.jpg" />
+    <Content Include="img\Socio_Junior.jpg" />
+    <Content Include="img\Socio_Ordinario.jpg" />
+    <Content Include="img\Socio_Simpatizzanti.jpg" />
+    <Content Include="img\Socio_Sostenitori.jpg" />
+    <Content Include="img\Sostenitori.jpg" />
+    <Content Include="img\taglie\circ_bacino.png" />
+    <Content Include="img\taglie\circ_collo.png" />
+    <Content Include="img\taglie\circ_testa.png" />
+    <Content Include="img\taglie\circ_torace.png" />
+    <Content Include="img\taglie\circ_vita.png" />
+    <Content Include="img\taglie\circ_vita_stomaco.png" />
+    <Content Include="img\taglie\larg_spalle.png" />
+    <Content Include="img\taglie\lung_cavallo.png" />
+    <Content Include="img\taglie\lung_ext.png" />
+    <Content Include="img\taglie\lung_ginocchio.png" />
+    <Content Include="img\taglie\lung_manica.png" />
+    <Content Include="img\taglie\lung_vita.png" />
+    <Content Include="img\titolo-in-evidenza.png" />
+    <Content Include="img\titolo-iscriviti.png" />
+    <Content Include="img\titolo-news.png" />
+    <Content Include="img\titolo-scopri-gna.png" />
+    <Content Include="img\titolo.png" />
+    <Content Include="img\titolo_old.png" />
+    <Content Include="ins_arm.aspx" />
+    <Content Include="ins_cond.aspx" />
+    <Content Include="ins_dec.aspx" />
+    <Content Include="ins_dimissioni.aspx" />
+    <Content Include="ins_fam.aspx" />
+    <Content Include="ins_istr.aspx" />
+    <Content Include="ins_proc.aspx" />
+    <Content Include="ins_ric.aspx" />
+    <Content Include="ins_settore.aspx" />
+    <Content Include="ins_soc.aspx" />
+    <Content Include="ins_veic.aspx" />
+    <Content Include="invio_docum.aspx" />
+    <Content Include="iscrizione.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="MasterPage.master" />
+    <Content Include="css\haettenschweiler.eot" />
+    <Content Include="css\haettenschweiler.ttf" />
+    <Content Include="css\skins\aqua\Thumbs.db" />
+    <Content Include="css\Thumbs.db" />
+    <Content Include="matricole_old.aspx" />
+    <Content Include="messagisticainterna.aspx" />
+    <Content Include="Missione.aspx" />
+    <Content Include="documenti\Bollettino.pdf" />
+    <Content Include="documenti\bollettino_compilabile.psd" />
+    <Content Include="documenti\bollettino_nuovo.pdf" />
+    <Content Include="documenti\cakepops_tartarughe.psd" />
+    <Content Include="documenti\Contestazione di illecito amministrativo inquinamento acustico.doc" />
+    <Content Include="documenti\Copertina Fax Locale.dot" />
+    <Content Include="documenti\decreto_110_29042016.pdf" />
+    <Content Include="documenti\Denuncia abuso edilizio.doc" />
+    <Content Include="documenti\Denuncia atti bracconaggio.doc" />
+    <Content Include="documenti\Denuncia autospurgo.doc" />
+    <Content Include="documenti\Denuncia discarica abusiva.doc" />
+    <Content Include="documenti\Denuncia inquinamento aria.doc" />
+    <Content Include="documenti\Denuncia inquinamento idrico.doc" />
+    <Content Include="documenti\Denuncia inquinamento rumore.doc" />
+    <Content Include="documenti\Denuncia maltrattamento animali.doc" />
+    <Content Include="documenti\Denuncia mancata rimozione rifiuti.doc" />
+    <Content Include="documenti\Denuncia mancata rimozione rifiuti2.doc" />
+    <Content Include="documenti\Domanda di iscrizione.dot" />
+    <Content Include="documenti\Domanda di iscrizione.pdf" />
+    <Content Include="documenti\Foglio di viaggio locali.dot" />
+    <Content Include="documenti\Guardia Nazionale Ambientale Circolare linee guida.pdf" />
+    <Content Include="documenti\Modello Dimissioni.doc" />
+    <Content Include="documenti\Modulistica.zip" />
+    <Content Include="documenti\organigramma.pdf" />
+    <Content Include="documenti\Presenze Mensili.xls" />
+    <Content Include="documenti\Rapporto di servizio.doc" />
+    <Content Include="documenti\Rapporto Informativo.doc" />
+    <Content Include="documenti\Regolamento.pdf" />
+    <Content Include="documenti\richiesta_mezzi.pdf" />
+    <Content Include="documenti\Risegnalazione Rifiuti.doc" />
+    <Content Include="documenti\Sanzioni-Antiincendio.doc" />
+    <Content Include="documenti\Scheda affido cani randagi.doc" />
+    <Content Include="documenti\Segnalazione atti vandalici del 08-09-2004.doc" />
+    <Content Include="documenti\Segnalazione atti vandalici.doc" />
+    <Content Include="documenti\Segnalazione Rifiuti.doc" />
+    <Content Include="documenti\sostenitore.pdf" />
+    <Content Include="documenti\Specchio persone controllate.doc" />
+    <Content Include="documenti\statuto.pdf" />
+    <Content Include="documenti\statuto_falso.pdf" />
+    <Content Include="documenti\tbl_comuni.csv" />
+    <Content Include="documenti\Vademecum aspirante.pdf" />
+    <Content Include="documenti\verbale di contestazione di illecito amministrativo.dot" />
+    <Content Include="documenti\Verbale di sequestro amministrativo.dot" />
+    <Content Include="documenti\Verbale Riunione Ordine del giorno.doc" />
+    <Content Include="documenti\www.guardianazionaleambi...id=150&amp;tp=Distaccamento.pdf" />
+    <Content Include="documenti\www.guardianazionaleambientale.eu - vis_socio.pdf" />
+    <Content Include="img\Retro rel 2014.psd" />
+    <Content Include="img\Thumbs.db" />
+    <Content Include="img\titolo.psd" />
+    <Content Include="comuni\comuni.json" />
+    <Content Include="Areacorsi\css\haettenschweiler.eot" />
+    <Content Include="Areacorsi\css\haettenschweiler.ttf" />
+    <Content Include="Areacorsi\css\skins\aqua\Thumbs.db" />
+    <Content Include="Areacorsi\css\Thumbs.db" />
+    <Content Include="Areacorsi\img\Retro rel 2014.psd" />
+    <Content Include="Areacorsi\img\Thumbs.db" />
+    <Content Include="Areacorsi\img\titolo.psd" />
+    <Content Include="MasterCorsi.master" />
+    <Content Include="images\desktop.ini" />
+    <Content Include="images\Foglio richiesta automezzo.pdf" />
+    <Content Include="images\logo.psd" />
+    <Content Include="images\Thumbs.db" />
+    <Content Include="images\top.psd" />
+    <Content Include="images\top1.psd" />
+    <Content Include="AreaCorsi20\css\haettenschweiler.eot" />
+    <Content Include="AreaCorsi20\css\haettenschweiler.ttf" />
+    <Content Include="AreaCorsi20\css\skins\aqua\Thumbs.db" />
+    <Content Include="AreaCorsi20\css\Thumbs.db" />
+    <Content Include="AreaCorsi20\img\Retro rel 2014.psd" />
+    <Content Include="AreaCorsi20\img\Thumbs.db" />
+    <Content Include="AreaCorsi20\img\titolo.psd" />
+    <Content Include="newPassword.aspx" />
+    <Content Include="OtpRequest_verifiedemail.aspx" />
+    <Content Include="Public\articoli\.gna benevento.jpg" />
+    <Content Include="Public\articoli\.gna corigliano.jpg" />
+    <Content Include="Public\articoli\.gna foggia - copia %282%29.jpg" />
+    <Content Include="Public\articoli\.gna foggia - copia.jpg" />
+    <Content Include="Public\articoli\.gna foggia.jpg" />
+    <Content Include="Public\articoli\.gnaabbruzzo...jpg" />
+    <Content Include="Public\articoli\.gnaabbruzzo.jpg" />
+    <Content Include="Public\articoli\.gnaardea.jpg" />
+    <Content Include="Public\articoli\.gnabenevento.jpg" />
+    <Content Include="Public\articoli\.gnafoggia..jpg" />
+    <Content Include="Public\articoli\.gnamontesacro.jpg" />
+    <Content Include="Public\articoli\.gnaroma.jpg" />
+    <Content Include="Public\articoli\001.jpg" />
+    <Content Include="Public\articoli\002.jpg" />
+    <Content Include="Public\articoli\003.jpg" />
+    <Content Include="Public\articoli\02.jpg" />
+    <Content Include="Public\articoli\100_1071.jpg" />
+    <Content Include="Public\articoli\100_1115.jpg" />
+    <Content Include="Public\articoli\100_1119.jpg" />
+    <Content Include="Public\articoli\10251978_10202638466336878_1918886474026612619_n %281%29.jpg" />
+    <Content Include="Public\articoli\17-12-2011 articolo sul giornale della siicilia.jpg" />
+    <Content Include="Public\articoli\19-02-2012 processione del patrono di noto s. corrado.jpg" />
+    <Content Include="Public\articoli\19667635_565553283834257_798842653182243932_o.jpg" />
+    <Content Include="Public\articoli\2.jpg" />
+    <Content Include="Public\articoli\25-01-2014 Intervento GNA su tagli abusivi legname.jpg" />
+    <Content Include="Public\articoli\281740_1909401656222_1277268566_31711201_6204334_n.jpg" />
+    <Content Include="Public\articoli\3.jpg" />
+    <Content Include="Public\articoli\30-03-2013 articolo alle guardiia nazionale ambientale giornale di sicilia.jpg" />
+    <Content Include="Public\articoli\316695_194361147314263_100002211387511_433693_1511927798_n.jpg" />
+    <Content Include="Public\articoli\39783_1360568662259_1472846725_30869048_631804_n.jpg" />
+    <Content Include="Public\articoli\acgih2.jpg" />
+    <Content Include="Public\articoli\Africani schiavi degli abusivi sono facchini per i ristoranti_Pagina_1.jpg" />
+    <Content Include="Public\articoli\aggiornamento_iv-municipio.jpg" />
+    <Content Include="Public\articoli\ardea ambiente.jpg" />
+    <Content Include="Public\articoli\articolo 2 municipio.jpg" />
+    <Content Include="Public\articoli\articolo ardea.jpg" />
+    <Content Include="Public\articoli\articolo ardea2.jpg" />
+    <Content Include="Public\articoli\articolo cerveteri.jpg" />
+    <Content Include="Public\articoli\articolo cerveteri1.jpg" />
+    <Content Include="Public\articoli\articolo cerveteri3.jpg" />
+    <Content Include="Public\articoli\articolo del 28-02-2012  lla sicilia.jpg" />
+    <Content Include="Public\articoli\articolo del giornale distaccamento di noto.jpg" />
+    <Content Include="Public\articoli\articolo distaccamento lariano.jpg" />
+    <Content Include="Public\articoli\articolo frattamaggiore2.jpg" />
+    <Content Include="Public\articoli\articolo frattamaggiore_page_1.jpg" />
+    <Content Include="Public\articoli\articolo giornale cisterna.jpg" />
+    <Content Include="Public\articoli\articolo il sannio gna.jpg" />
+    <Content Include="Public\articoli\articolo iv municipio %282%29.jpg" />
+    <Content Include="Public\articoli\articolo iv municipio.jpg" />
+    <Content Include="Public\articoli\articolo lariano.jpg" />
+    <Content Include="Public\articoli\articolo magliano.jpg" />
+    <Content Include="Public\articoli\articolo piemonte.jpg" />
+    <Content Include="Public\articoli\articolo ritrovamento da parte dei agenti della guardia nazionale ambientale.jpg" />
+    <Content Include="Public\articoli\articolo sulla sicilia del 5-11-2011  festa delle forze armate.jpg" />
+    <Content Include="Public\articoli\articolo trigoria2_page_1.jpg" />
+    <Content Include="Public\articoli\articolo.JPG" />
+    <Content Include="Public\articoli\Articolo1.jpg" />
+    <Content Include="Public\articoli\ARTICOLO_AMBIENTE_PRATO.JPG" />
+    <Content Include="Public\articoli\articolo_depuratore.jpg" />
+    <Content Include="Public\articoli\articolo_tvprato.JPG" />
+    <Content Include="Public\articoli\art_scuole_2016.JPG" />
+    <Content Include="Public\articoli\aurora.jpg" />
+    <Content Include="Public\articoli\BresciaOggi 2018-03-26.jpg" />
+    <Content Include="Public\articoli\Brusasco.jpg" />
+    <Content Include="Public\articoli\busta -invito del 25-04-2012.jpg" />
+    <Content Include="Public\articoli\busta dal comune di noto.jpg" />
+    <Content Include="Public\articoli\busta del comune di noto.jpg" />
+    <Content Include="Public\articoli\busta invito del 29-03-2012.jpg" />
+    <Content Include="Public\articoli\caffe.jpg" />
+    <Content Include="Public\articoli\cavalli cerveteri.jpg" />
+    <Content Include="Public\articoli\cerceteri big.jpg" />
+    <Content Include="Public\articoli\cerveteri altravoce.jpg" />
+    <Content Include="Public\articoli\cerveteri caerite.jpg" />
+    <Content Include="Public\articoli\cerveteri centum.jpg" />
+    <Content Include="Public\articoli\cerveteri etrurian.jpg" />
+    <Content Include="Public\articoli\cerveteri notizia.jpg" />
+    <Content Include="Public\articoli\cerveteri tabloid.jpg" />
+    <Content Include="Public\articoli\cerveteri wikio.jpg" />
+    <Content Include="Public\articoli\cerveterinotizia.jpg" />
+    <Content Include="Public\articoli\cerveteriokitalia.jpg" />
+    <Content Include="Public\articoli\cerveteriwikio.jpg" />
+    <Content Include="Public\articoli\cisterna.jpg" />
+    <Content Include="Public\articoli\compleanno comunicati.jpg" />
+    <Content Include="Public\articoli\compleanno informazione.jpg" />
+    <Content Include="Public\articoli\compleanno notizia.jpg" />
+    <Content Include="Public\articoli\compleanno rss.jpg" />
+    <Content Include="Public\articoli\compleanno wikio.jpg" />
+    <Content Include="Public\articoli\comunicato di servizio al sito archeologico villa romana.jpg" />
+    <Content Include="Public\articoli\comunicazione di servizio n° 2.jpg" />
+    <Content Include="Public\articoli\Corso MN 2019 x Web.jpg" />
+    <Content Include="Public\articoli\discarica foggia.jpg" />
+    <Content Include="Public\articoli\Discarica Tavoletta.jpg" />
+    <Content Include="Public\articoli\Dist. Cerignola.jpg" />
+    <Content Include="Public\articoli\distaccamento di noto.jpg" />
+    <Content Include="Public\articoli\ecomafie assgiornalisti.jpg" />
+    <Content Include="Public\articoli\ecomafie benvenutisud.jpg" />
+    <Content Include="Public\articoli\ecomafie cilento.jpg" />
+    <Content Include="Public\articoli\ecomafie dentrosalerno.jpg" />
+    <Content Include="Public\articoli\ecomafie giornalecilento.jpg" />
+    <Content Include="Public\articoli\ecomafie green.jpg" />
+    <Content Include="Public\articoli\ecomafie infoagropoli.jpg" />
+    <Content Include="Public\articoli\ecomafie informazione.jpg" />
+    <Content Include="Public\articoli\ecomafie julie.jpg" />
+    <Content Include="Public\articoli\ecomafie ladestra.jpg" />
+    <Content Include="Public\articoli\ecomafie millepaesi.jpg" />
+    <Content Include="Public\articoli\ecomafie modatendenze.jpg" />
+    <Content Include="Public\articoli\ecomafie napolinotizie.jpg" />
+    <Content Include="Public\articoli\ecomafie newtuscia.jpg" />
+    <Content Include="Public\articoli\ecomafie notiziario.jpg" />
+    <Content Include="Public\articoli\ecomafie polecitt.jpg" />
+    <Content Include="Public\articoli\ecomafie positano.jpg" />
+    <Content Include="Public\articoli\ecomafie raggi.jpg" />
+    <Content Include="Public\articoli\ecomafie report.jpg" />
+    <Content Include="Public\articoli\ecomafie salernorss.jpg" />
+    <Content Include="Public\articoli\ecomafie sicurezza.jpg" />
+    <Content Include="Public\articoli\ecomafie sudsalerno.jpg" />
+    <Content Include="Public\articoli\ecomafie teletorre.jpg" />
+    <Content Include="Public\articoli\ecomafie vas.jpg" />
+    <Content Include="Public\articoli\ecomafie volturno.jpg" />
+    <Content Include="Public\articoli\ecomafie.1.jpg" />
+    <Content Include="Public\articoli\ecomafie.2.jpg" />
+    <Content Include="Public\articoli\ecomafie1.jpg" />
+    <Content Include="Public\articoli\ecomafie3..jpg" />
+    <Content Include="Public\articoli\ecomafiecilento.jpg" />
+    <Content Include="Public\articoli\ecomafiereport.jpg" />
+    <Content Include="Public\articoli\emergenza rifiuti messina.jpg" />
+    <Content Include="Public\articoli\energie denaro.jpg" />
+    <Content Include="Public\articoli\energie famcristiana.jpg" />
+    <Content Include="Public\articoli\energie panorama.jpg" />
+    <Content Include="Public\articoli\energie raggi.jpg" />
+    <Content Include="Public\articoli\energie sanremo.jpg" />
+    <Content Include="Public\articoli\festa dell%27albero cisterna di latina_pagina_1.jpg" />
+    <Content Include="Public\articoli\festa dell%27albero cisterna di latina_pagina_2.jpg" />
+    <Content Include="Public\articoli\gattini comunicati.jpg" />
+    <Content Include="Public\articoli\gattini friendfeed.jpg" />
+    <Content Include="Public\articoli\gattini gratis.jpg" />
+    <Content Include="Public\articoli\gattini pianeta.jpg" />
+    <Content Include="Public\articoli\gattini stampa.jpg" />
+    <Content Include="Public\articoli\gggggggggnnaaa.jpg" />
+    <Content Include="Public\articoli\GiornalediBrescia 2018-03-26.jpg" />
+    <Content Include="Public\articoli\GiornalediBrescia.jpg" />
+    <Content Include="Public\articoli\giuramento 1.bmp" />
+    <Content Include="Public\articoli\gna  montesacro.jpg" />
+    <Content Include="Public\articoli\gna 5 siti..jpg" />
+    <Content Include="Public\articoli\gna 5 siti.jpg" />
+    <Content Include="Public\articoli\gna acqua.jpg" />
+    <Content Include="Public\articoli\gna ardea sanzioni.jpg" />
+    <Content Include="Public\articoli\gna ardea sanzioni.tiff" />
+    <Content Include="Public\articoli\gna ardea..jpg" />
+    <Content Include="Public\articoli\gna ardea.jpg" />
+    <Content Include="Public\articoli\gna ardea1.jpg" />
+    <Content Include="Public\articoli\gna benevento..jpg" />
+    <Content Include="Public\articoli\gna benevento.jpg" />
+    <Content Include="Public\articoli\gna cani uccisi.jpg" />
+    <Content Include="Public\articoli\gna cani_uccisi.jpg" />
+    <Content Include="Public\articoli\gna carapelle.jpg" />
+    <Content Include="Public\articoli\gna cerveteri unesco.jpg" />
+    <Content Include="Public\articoli\gna cerveteri..jpg" />
+    <Content Include="Public\articoli\gna cerveteri.jpg" />
+    <Content Include="Public\articoli\gna daunia.jpg" />
+    <Content Include="Public\articoli\gna e anppe.jpg" />
+    <Content Include="Public\articoli\gna foggia..jpg" />
+    <Content Include="Public\articoli\gna foggia.jpg" />
+    <Content Include="Public\articoli\gna foggia1.jpg" />
+    <Content Include="Public\articoli\gna foggia2.jpg" />
+    <Content Include="Public\articoli\gna frattamaggiore..jpg" />
+    <Content Include="Public\articoli\gna frattamaggiore.jpg" />
+    <Content Include="Public\articoli\gna latina..jpg" />
+    <Content Include="Public\articoli\gna latina.jpg" />
+    <Content Include="Public\articoli\gna latina1.jpg" />
+    <Content Include="Public\articoli\gna lepini.jpg" />
+    <Content Include="Public\articoli\gna nastro azz.jpg" />
+    <Content Include="Public\articoli\GNA operazione chiese pulito.jpg" />
+    <Content Include="Public\articoli\gna ordona.jpg" />
+    <Content Include="Public\articoli\gna pc comunicati.jpg" />
+    <Content Include="Public\articoli\gna pc mattino.jpg" />
+    <Content Include="Public\articoli\gna pc notizia.jpg" />
+    <Content Include="Public\articoli\gna pc wikio.jpg" />
+    <Content Include="Public\articoli\gna pontino.jpg" />
+    <Content Include="Public\articoli\gna regione..jpg" />
+    <Content Include="Public\articoli\gna regione.jpg" />
+    <Content Include="Public\articoli\gna regione1.jpg" />
+    <Content Include="Public\articoli\gna regione2.jpg" />
+    <Content Include="Public\articoli\gna regione3.jpg" />
+    <Content Include="Public\articoli\gna regione4.jpg" />
+    <Content Include="Public\articoli\gna rfiuti rinascita.jpg" />
+    <Content Include="Public\articoli\gna rifiuti alto.jpg" />
+    <Content Include="Public\articoli\gna rifiuti comunicati.jpg" />
+    <Content Include="Public\articoli\gna rifiuti informazione.jpg" />
+    <Content Include="Public\articoli\gna rifiuti italia.jpg" />
+    <Content Include="Public\articoli\gna rifiuti marigliano.jpg" />
+    <Content Include="Public\articoli\gna rifiuti meridione.jpg" />
+    <Content Include="Public\articoli\gna rifiuti notizia.jpg" />
+    <Content Include="Public\articoli\gna rifiuti roma.jpg" />
+    <Content Include="Public\articoli\gna rifiuti salerno.jpg" />
+    <Content Include="Public\articoli\gna rifiuti sannio.jpg" />
+    <Content Include="Public\articoli\gna rifiuti telefree.jpg" />
+    <Content Include="Public\articoli\gna rifiuti torre.jpg" />
+    <Content Include="Public\articoli\gna rifiuti tuscia.jpg" />
+    <Content Include="Public\articoli\gna rifiuti volturno.jpg" />
+    <Content Include="Public\articoli\gna rifiuto wikio.jpg" />
+    <Content Include="Public\articoli\gna sabina.jpg" />
+    <Content Include="Public\articoli\gna salva vita.jpg" />
+    <Content Include="Public\articoli\gna salvano vita.jpg" />
+    <Content Include="Public\articoli\gna salvavita..jpg" />
+    <Content Include="Public\articoli\gna salvavita.jpg" />
+    <Content Include="Public\articoli\gna sannio.jpg" />
+    <Content Include="Public\articoli\gna sansebastiano.jpg" />
+    <Content Include="Public\articoli\gna scuole..jpg" />
+    <Content Include="Public\articoli\gna scuole.jpg" />
+    <Content Include="Public\articoli\gna spinaceto.jpg" />
+    <Content Include="Public\articoli\gna terracina.jpg" />
+    <Content Include="Public\articoli\gna tivoli terme.jpg" />
+    <Content Include="Public\articoli\gna tivoli terme_.jpg" />
+    <Content Include="Public\articoli\gna tortoli.jpg" />
+    <Content Include="Public\articoli\gna trigoria.jpg" />
+    <Content Include="Public\articoli\gna vigili.jpg" />
+    <Content Include="Public\articoli\gna vite altocasertano.jpg" />
+    <Content Include="Public\articoli\gna vite comunicati.jpg" />
+    <Content Include="Public\articoli\gna vite informaz campania.jpg" />
+    <Content Include="Public\articoli\gna vite mianottizia.jpg" />
+    <Content Include="Public\articoli\gna vite roma.jpg" />
+    <Content Include="Public\articoli\gna vite virgilio.jpg" />
+    <Content Include="Public\articoli\gna vite wikio.jpg" />
+    <Content Include="Public\articoli\gna.jpg" />
+    <Content Include="Public\articoli\gna1.jpg" />
+    <Content Include="Public\articoli\gnascuole.jpg" />
+    <Content Include="Public\articoli\gna_anppe.jpg" />
+    <Content Include="Public\articoli\gna_anppe_comunicati.jpg" />
+    <Content Include="Public\articoli\gna_anppe_notizia.jpg" />
+    <Content Include="Public\articoli\gna_anppe_wikio.jpg" />
+    <Content Include="Public\articoli\gna_ardea.jpg" />
+    <Content Include="Public\articoli\guardia nazionale.jpg" />
+    <Content Include="Public\articoli\Hydrangeas.jpg" />
+    <Content Include="Public\articoli\il caffe tv.jpg" />
+    <Content Include="Public\articoli\il corriere.jpg" />
+    <Content Include="Public\articoli\il faro notizie su cerveteri_pagina_1.jpg" />
+    <Content Include="Public\articoli\IMG-20140321-WA0003.jpg" />
+    <Content Include="Public\articoli\IMG-20140321-WA0004.jpg" />
+    <Content Include="Public\articoli\IMG-20140329-WA0030.jpg" />
+    <Content Include="Public\articoli\img049.jpg" />
+    <Content Include="Public\articoli\img050.jpg" />
+    <Content Include="Public\articoli\img134.jpg" />
+    <Content Include="Public\articoli\img168.jpg" />
+    <Content Include="Public\articoli\img171.jpg" />
+    <Content Include="Public\articoli\img172.jpg" />
+    <Content Include="Public\articoli\img681.jpg" />
+    <Content Include="Public\articoli\IMG_20170705_164057_876.jpg" />
+    <Content Include="Public\articoli\IMG_20180111_092745[1].jpg" />
+    <Content Include="Public\articoli\IMG_20180813_082951.jpg" />
+    <Content Include="Public\articoli\IMG_20180919_122828.jpg" />
+    <Content Include="Public\articoli\IMG_20180921_110849.jpg" />
+    <Content Include="Public\articoli\IMG_20180924_092419.jpg" />
+    <Content Include="Public\articoli\img_48873444934310-1 %281%29.jpg" />
+    <Content Include="Public\articoli\incendio1 001.jpg" />
+    <Content Include="Public\articoli\incendio1 002.jpg" />
+    <Content Include="Public\articoli\InkedWhatsApp Image 2017-11-10 at 07.21.24_LI %282%29.jpg" />
+    <Content Include="Public\articoli\intervento gatti 14 giugno.JPG" />
+    <Content Include="Public\articoli\invito del 25-04-2012.jpg" />
+    <Content Include="Public\articoli\invito per la processione della santa spina.jpg" />
+    <Content Include="Public\articoli\iscrizioni cerveteri.jpg" />
+    <Content Include="Public\articoli\la voce 0503.jpg" />
+    <Content Include="Public\articoli\latina comunicati.jpg" />
+    <Content Include="Public\articoli\latina notizia.jpg" />
+    <Content Include="Public\articoli\latina wikio.jpg" />
+    <Content Include="Public\articoli\Locandina Iscrizioni Corso.jpg" />
+    <Content Include="Public\articoli\locandina_convegno_su_tutela_ambientale.jpg" />
+    <Content Include="Public\articoli\Manerbio week.jpg" />
+    <Content Include="Public\articoli\MANIFESTO.jpg" />
+    <Content Include="Public\articoli\MANIFESTO5DICEMBRE %282%29 g.jpg" />
+    <Content Include="Public\articoli\massa di somma.jpg" />
+    <Content Include="Public\articoli\montesacro.jpg" />
+    <Content Include="Public\articoli\newsgna.jpg" />
+    <Content Include="Public\articoli\newspaper.jpg" />
+    <Content Include="Public\articoli\notizie guardia_nazionale_ambientale.jpg" />
+    <Content Include="Public\articoli\ordine di servizio del 14-04-2012.jpg" />
+    <Content Include="Public\articoli\ordona..jpg" />
+    <Content Include="Public\articoli\ordona.jpg" />
+    <Content Include="Public\articoli\orta nova foggia.jpg" />
+    <Content Include="Public\articoli\orta nova.jpg" />
+    <Content Include="Public\articoli\ortanova wikio.jpg" />
+    <Content Include="Public\articoli\osteria nuova arresti.jpg" />
+    <Content Include="Public\articoli\p003_1_1.jpg" />
+    <Content Include="Public\articoli\p003_1_2.jpg" />
+    <Content Include="Public\articoli\p003_1_3.jpg" />
+    <Content Include="Public\articoli\p003_1_4.jpg" />
+    <Content Include="Public\articoli\p2240025.jpg" />
+    <Content Include="Public\articoli\portici verde..jpg" />
+    <Content Include="Public\articoli\portici verde.jpg" />
+    <Content Include="Public\articoli\pratola.jpg" />
+    <Content Include="Public\articoli\pratola1.jpg" />
+    <Content Include="Public\articoli\pratola2.jpg" />
+    <Content Include="Public\articoli\quarto.jpg" />
+    <Content Include="Public\articoli\quarto1.jpg" />
+    <Content Include="Public\articoli\recupero_cane_marzo2017.JPG" />
+    <Content Include="Public\articoli\ringraziamento dal vaticano.jpg" />
+    <Content Include="Public\articoli\Scan 2.jpg" />
+    <Content Include="Public\articoli\scan 3.jpg" />
+    <Content Include="Public\articoli\Scan 33.jpg" />
+    <Content Include="Public\articoli\Scan 45.jpg" />
+    <Content Include="Public\articoli\Scan.jpg" />
+    <Content Include="Public\articoli\Scan66.jpg" />
+    <Content Include="Public\articoli\task.jpg" />
+    <Content Include="Public\articoli\tessera personale di identità del comune di noto.jpg" />
+    <Content Include="Public\articoli\tortora metro Articolo.jpg" />
+    <Content Include="Public\articoli\villa 001.jpg" />
+    <Content Include="Public\articoli\vincenzo in moto.jpg" />
+    <Content Include="Public\articoli\vincenzo.jpg" />
+    <Content Include="Public\articoli\zanna1.jpg" />
+    <Content Include="Public\articoli\zanna2.jpg" />
+    <Content Include="Public\articoli\zanna3.jpg" />
+    <Content Include="Public\articoli\zanna4.jpg" />
+    <Content Include="Public\articoli\zoofila_gen_2017.JPG" />
+    <Content Include="Public\articoli\zz008.jpg" />
+    <Content Include="Public\articoli\zzaggressione.jpg" />
+    <Content Include="Public\articoli\zzasino salvatopubblica.jpg" />
+    <Content Include="Public\articoli\zzfamiglia salvata107.jpg" />
+    <Content Include="Public\articoli\zzvalleifreda108.jpg" />
+    <Content Include="RecuperaPassword.aspx" />
+    <Content Include="regsocio.aspx" />
+    <Content Include="ric_socio.aspx" />
+    <Content Include="SitoInManutenzione.aspx" />
+    <Content Include="TestAutoCompleteM.aspx" />
+    <Content Include="TestProvaGNET.aspx" />
+    <Content Include="WebLoadComune.asmx" />
+    <None Include="Connected Services\WebServicegna\CalcoloCodiceFiscale.wsdl" />
+    <None Include="My Project\PublishProfiles\CustomProfile.pubxml" />
+    <Content Include="Modulicorso.aspx" />
+    <Content Include="Public\modellicorso\Modulo droni web.pdf" />
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="javascript\alttxt.js" />
+    <Content Include="javascript\effects.js" />
+    <Content Include="javascript\jquery-1.10.2.js" />
+    <Content Include="javascript\jquery-ui-1.10.4.custom.js" />
+    <Content Include="javascript\jquery-ui-1.10.4.custom.min.js" />
+    <Content Include="javascript\jquery.js" />
+    <Content Include="javascript\jquery.OptimalFadeImage.js" />
+    <Content Include="javascript\lightwindow.js" />
+    <Content Include="javascript\prototype.js" />
+    <Content Include="javascript\scriptaculous.js" />
+    <Content Include="Nuovo.aspx" />
+    <Content Include="registrazioneDroni.aspx" />
+    <Content Include="registrazionecorso.aspx" />
+    <Content Include="riservata.aspx" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="slideshowcorsi.aspx" />
+    <Content Include="slideshow\CORSI GNA-06_droni.jpg" />
+    <Content Include="slideshow\home_0_1.jpg" />
+    <Content Include="slideshow\home_0_2.jpg" />
+    <Content Include="slideshow\home_0_3.jpg" />
+    <Content Include="slideshow\home_0_4.jpg" />
+    <Content Include="slideshow\home_0_5.jpg" />
+    <Content Include="slideshow\home_1_1.jpg" />
+    <Content Include="slideshow\home_1_2.jpg" />
+    <Content Include="slideshow\home_1_3.jpg" />
+    <Content Include="slideshow\home_1_4.jpg" />
+    <Content Include="slideshow\home_1_5.jpg" />
+    <Content Include="slideshow\locandina.jpg" />
+    <Content Include="slideshow\locandina1.jpg" />
+    <Content Include="slideshow\Locandina2.jpg" />
+    <Content Include="slideshow\Locandina3.jpg" />
+    <Content Include="slideshow\Locandina4.jpg" />
+    <Content Include="slideshow\Locandina5.jpg" />
+    <Content Include="slideshow\Locandina6.jpg" />
+    <Content Include="slideshow\p002_0_1.jpg" />
+    <Content Include="slideshow\p002_0_10.jpg" />
+    <Content Include="slideshow\p002_0_11.jpg" />
+    <Content Include="slideshow\p002_0_12.jpg" />
+    <Content Include="slideshow\p002_0_13.jpg" />
+    <Content Include="slideshow\p002_0_14.jpg" />
+    <Content Include="slideshow\p002_0_15.jpg" />
+    <Content Include="slideshow\p002_0_16.jpg" />
+    <Content Include="slideshow\p002_0_17.jpg" />
+    <Content Include="slideshow\p002_0_18.jpg" />
+    <Content Include="slideshow\p002_0_19.jpg" />
+    <Content Include="slideshow\p002_0_2.jpg" />
+    <Content Include="slideshow\p002_0_20.jpg" />
+    <Content Include="slideshow\p002_0_21.jpg" />
+    <Content Include="slideshow\p002_0_22.jpg" />
+    <Content Include="slideshow\p002_0_23.jpg" />
+    <Content Include="slideshow\p002_0_24.jpg" />
+    <Content Include="slideshow\p002_0_25.jpg" />
+    <Content Include="slideshow\p002_0_26.jpg" />
+    <Content Include="slideshow\p002_0_27.jpg" />
+    <Content Include="slideshow\p002_0_28.jpg" />
+    <Content Include="slideshow\p002_0_29.jpg" />
+    <Content Include="slideshow\p002_0_3.jpg" />
+    <Content Include="slideshow\p002_0_30.jpg" />
+    <Content Include="slideshow\p002_0_31.jpg" />
+    <Content Include="slideshow\p002_0_32.jpg" />
+    <Content Include="slideshow\p002_0_33.jpg" />
+    <Content Include="slideshow\p002_0_4.jpg" />
+    <Content Include="slideshow\p002_0_5.jpg" />
+    <Content Include="slideshow\p002_0_6.jpg" />
+    <Content Include="slideshow\p002_0_7.jpg" />
+    <Content Include="slideshow\p002_0_8.jpg" />
+    <Content Include="slideshow\p002_0_9.jpg" />
+    <Content Include="slideshow\p003_1_1.jpg" />
+    <Content Include="slideshow\p003_1_2.jpg" />
+    <Content Include="slideshow\p003_1_3.jpg" />
+    <Content Include="slideshow\p003_1_4.jpg" />
+    <Content Include="Statuto.swf" />
+    <Content Include="Storia.aspx" />
+    <Content Include="TestAutocomplete.aspx" />
+    <Content Include="TestConnessione.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Bundle.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Accet.aspx.designer.vb">
+      <DependentUpon>Accet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accet.aspx.vb">
+      <DependentUpon>Accet.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="App_Start\BundleConfig.vb" />
+    <Compile Include="App_Start\RouteConfig.vb" />
+    <Compile Include="AreaCorsi20\CompilaModuloPdf20.vb" />
+    <Compile Include="AreaCorsi20\GestioneDocIdentità20.vb" />
+    <Compile Include="AreaCorsi20\GestionePagamentoCorso20.vb" />
+    <Compile Include="AreaCorsi20\GestioneProfilo20.vb" />
+    <Compile Include="AreaCorsi20\GestioneRecapito20.vb" />
+    <Compile Include="AreaCorsi20\GestioneUtente20.vb" />
+    <Compile Include="AreaCorsi20\gest_pagamento20.vb" />
+    <Compile Include="Areacorsi\CompilaModuloPdf.vb" />
+    <Compile Include="Areacorsi\GestioneDocIdentità.vb" />
+    <Compile Include="Areacorsi\GestionePagamentoCorso.vb" />
+    <Compile Include="Areacorsi\GestioneRecapito.vb" />
+    <Compile Include="Areacorsi\GestioneUtente.vb" />
+    <Compile Include="Areacorsi\gest_pagamento.vb" />
+    <Compile Include="Connected Services\GetCognomSocio\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\VerificaCF\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\WebServicegna\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="contenuto_moduloA3.aspx.designer.vb">
+      <DependentUpon>contenuto_moduloA3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="contenuto_moduloA3.aspx.vb">
+      <DependentUpon>contenuto_moduloA3.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="contenuto_moduloA2.aspx.designer.vb">
+      <DependentUpon>contenuto_moduloA2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="contenuto_moduloA2.aspx.vb">
+      <DependentUpon>contenuto_moduloA2.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="contenuto_moduloA1.aspx.designer.vb">
+      <DependentUpon>contenuto_moduloA1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="contenuto_moduloA1.aspx.vb">
+      <DependentUpon>contenuto_moduloA1.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Areacorsi\GestioneProfilo.vb" />
+    <Compile Include="Corsi_Professionali_2019.aspx.designer.vb">
+      <DependentUpon>Corsi_Professionali_2019.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Corsi_Professionali_2019.aspx.vb">
+      <DependentUpon>Corsi_Professionali_2019.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="emailverified.aspx.designer.vb">
+      <DependentUpon>emailverified.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="emailverified.aspx.vb">
+      <DependentUpon>emailverified.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ins_arm.aspx.designer.vb">
+      <DependentUpon>ins_arm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ins_arm.aspx.vb">
+      <DependentUpon>ins_arm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ins_cond.aspx.designer.vb">
+      <DependentUpon>ins_cond.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ins_cond.aspx.vb">
+      <DependentUpon>ins_cond.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ins_dec.aspx.designer.vb">
+      <DependentUpon>ins_dec.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ins_dec.aspx.vb">
+      <DependentUpon>ins_dec.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ins_dimissioni.aspx.designer.vb">
+      <DependentUpon>ins_dimissioni.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ins_dimissioni.aspx.vb">
+      <DependentUpon>ins_dimissioni.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ins_fam.aspx.designer.vb">
+      <DependentUpon>ins_fam.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ins_fam.aspx.vb">
+      <DependentUpon>ins_fam.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ins_istr.aspx.designer.vb">
+      <DependentUpon>ins_istr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ins_istr.aspx.vb">
+      <DependentUpon>ins_istr.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ins_proc.aspx.designer.vb">
+      <DependentUpon>ins_proc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ins_proc.aspx.vb">
+      <DependentUpon>ins_proc.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ins_ric.aspx.designer.vb">
+      <DependentUpon>ins_ric.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ins_ric.aspx.vb">
+      <DependentUpon>ins_ric.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ins_settore.aspx.designer.vb">
+      <DependentUpon>ins_settore.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ins_settore.aspx.vb">
+      <DependentUpon>ins_settore.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ins_soc.aspx.designer.vb">
+      <DependentUpon>ins_soc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ins_soc.aspx.vb">
+      <DependentUpon>ins_soc.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ins_veic.aspx.designer.vb">
+      <DependentUpon>ins_veic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ins_veic.aspx.vb">
+      <DependentUpon>ins_veic.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="invio_docum.aspx.designer.vb">
+      <DependentUpon>invio_docum.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="invio_docum.aspx.vb">
+      <DependentUpon>invio_docum.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="iscrizione.aspx.designer.vb">
+      <DependentUpon>iscrizione.aspx.vb</DependentUpon>
+    </Compile>
+    <Compile Include="iscrizione.aspx.vb">
+      <DependentUpon>iscrizione.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterCorsi.master.designer.vb">
+      <DependentUpon>MasterCorsi.master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterCorsi.master.vb">
+      <DependentUpon>MasterCorsi.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="compilapdf.aspx.designer.vb">
+      <DependentUpon>compilapdf.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="compilapdf.aspx.vb">
+      <DependentUpon>compilapdf.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="comuni\Comuni.vb" />
+    <Compile Include="comuni\Province.vb" />
+    <Compile Include="comuni\Regione.vb" />
+    <Compile Include="comuni\Zona.vb" />
+    <Compile Include="DetailsPageCorso.aspx.designer.vb">
+      <DependentUpon>DetailsPageCorso.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DetailsPageCorso.aspx.vb">
+      <DependentUpon>DetailsPageCorso.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.designer.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage.master.vb">
+      <DependentUpon>MasterPage.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="matricole_old.aspx.designer.vb">
+      <DependentUpon>matricole_old.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="matricole_old.aspx.vb">
+      <DependentUpon>matricole_old.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="messagisticainterna.aspx.designer.vb">
+      <DependentUpon>messagisticainterna.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="messagisticainterna.aspx.vb">
+      <DependentUpon>messagisticainterna.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Modulicorso.aspx.designer.vb">
+      <DependentUpon>Modulicorso.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modulicorso.aspx.vb">
+      <DependentUpon>Modulicorso.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="newPassword.aspx.designer.vb">
+      <DependentUpon>newPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="newPassword.aspx.vb">
+      <DependentUpon>newPassword.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Nuovo.aspx.designer.vb">
+      <DependentUpon>Nuovo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Nuovo.aspx.vb">
+      <DependentUpon>Nuovo.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="OtpRequest_verifiedemail.aspx.designer.vb">
+      <DependentUpon>OtpRequest_verifiedemail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OtpRequest_verifiedemail.aspx.vb">
+      <DependentUpon>OtpRequest_verifiedemail.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="RecuperaPassword.aspx.designer.vb">
+      <DependentUpon>RecuperaPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RecuperaPassword.aspx.vb">
+      <DependentUpon>RecuperaPassword.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="registrazioneDroni.aspx.designer.vb">
+      <DependentUpon>registrazioneDroni.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="registrazioneDroni.aspx.vb">
+      <DependentUpon>registrazioneDroni.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registrazionecorso.aspx.designer.vb">
+      <DependentUpon>registrazionecorso.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="registrazionecorso.aspx.vb">
+      <DependentUpon>registrazionecorso.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="regsocio.aspx.designer.vb">
+      <DependentUpon>regsocio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="regsocio.aspx.vb">
+      <DependentUpon>regsocio.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ric_socio.aspx.designer.vb">
+      <DependentUpon>ric_socio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ric_socio.aspx.vb">
+      <DependentUpon>ric_socio.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="riservata.aspx.designer.vb">
+      <DependentUpon>riservata.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="riservata.aspx.vb">
+      <DependentUpon>riservata.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Site1.Master.designer.vb">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site1.Master.vb">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SitoInManutenzione.aspx.designer.vb">
+      <DependentUpon>SitoInManutenzione.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SitoInManutenzione.aspx.vb">
+      <DependentUpon>SitoInManutenzione.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="slideshowcorsi.aspx.designer.vb">
+      <DependentUpon>slideshowcorsi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="slideshowcorsi.aspx.vb">
+      <DependentUpon>slideshowcorsi.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Storia.aspx.designer.vb">
+      <DependentUpon>Storia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Storia.aspx.vb">
+      <DependentUpon>Storia.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="TestAutocomplete.aspx.designer.vb">
+      <DependentUpon>TestAutocomplete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TestAutocomplete.aspx.vb">
+      <DependentUpon>TestAutocomplete.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="TestAutoCompleteM.aspx.designer.vb">
+      <DependentUpon>TestAutoCompleteM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TestAutoCompleteM.aspx.vb">
+      <DependentUpon>TestAutoCompleteM.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="TestConnessione.aspx.designer.vb">
+      <DependentUpon>TestConnessione.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TestConnessione.aspx.vb">
+      <DependentUpon>TestConnessione.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Missione.aspx.designer.vb">
+      <DependentUpon>Missione.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Missione.aspx.vb">
+      <DependentUpon>Missione.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="TestProvaGNET.aspx.designer.vb">
+      <DependentUpon>TestProvaGNET.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TestProvaGNET.aspx.vb">
+      <DependentUpon>TestProvaGNET.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="WebLoadComune.asmx.vb">
+      <DependentUpon>WebLoadComune.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
+    <Content Include="Views\web.config" />
+    <Content Include="Thumbs.db" />
+    <Content Include="slideshow\Thumbs.db" />
+    <Content Include="Site1.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="Models\" />
+    <Folder Include="Public\documentazione\" />
+    <Folder Include="Public\Documenti\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\GetCognomSocio\" />
+    <WCFMetadataStorage Include="Connected Services\VerificaCF\" />
+    <WCFMetadataStorage Include="Connected Services\WebServicegna\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>56145</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:56145/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Questo progetto fa riferimento a uno o più pacchetti NuGet che non sono presenti in questo computer. Usare lo strumento di ripristino dei pacchetti NuGet per scaricarli. Per altre informazioni, vedere http://go.microsoft.com/fwlink/?LinkID=322105. Il file mancante è {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

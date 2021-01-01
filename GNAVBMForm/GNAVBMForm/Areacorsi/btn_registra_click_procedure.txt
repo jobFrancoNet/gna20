@@ -1,0 +1,146 @@
+SETUP REGISTRAZIONE DATI DA MODULO....
+
+Ordine di salvataggio dati al pulsante di registrazione
+
+1) Anagrafica Recapito
+2) Anagrafica Profilo
+3) Anagrafica utente
+4) Anagrafica doc_ric
+5) Pagamenti corsi
+
+
+
+ 'STEP1  REGISTRARE LE INFO PRESO DAL MODULO NELLA TABELLA Anagrafica utenti
+        Dim gestioneutente As GestioneUtente
+        Try
+            mysqlconn = New MySqlConnection()
+            mysqlcomm = New MySqlCommand()
+            mysqlcomm.CommandType = System.Data.CommandType.Text
+            Dim istruzionesql As String = "Insert into anagrafica_utenti("
+            istruzionesql = istruzionesql & "UserId,Password,Nome,Cognome,IdProfilo,Matricola) values("
+            mysqlcomm.Connection = mysqlconn
+            mysqlcomm.CommandText = istruzionesql
+
+            mysqlcomm_gna = New MySqlCommand()
+            mysqlcomm_gna.Connection = mysqlconn
+            mysqlcomm_gna.CommandText = "Select * from tbl_accesso where Matricola=" & matricola.Value
+
+
+            If (gna.Checked = True) Then
+                gestioneutente = New GestioneUtente()
+                gestioneutente.Cognome = txt_cognome.Value
+                gestioneutente.nome = txt_nome.Value
+                gestioneutente.Matricola = matricola.Value
+                gestioneutente.OttieniUserIdPasswordbyMatricola(matricola.Value, mysqlcomm, mysqlconn, stringaconnessione_gna, stringaconnessione_corsi, mysqlcomm_gna)
+            Else
+
+                gestioneutente = New GestioneUtente()
+                gestioneutente.Cognome = txt_cognome.Value
+                gestioneutente.nome = txt_nome.Value
+                gestioneutente.UserId = user_id_corsista.Value
+                gestioneutente.password = pwd_corsista.Value
+                istruzionesql = "Insert into anagrafica_utenti(UserId,Password,Nome,Cognome,IdProfilo) values("
+                mysqlcomm.CommandText = istruzionesql
+                gestioneutente.SalvaInfo_corsista_nonGna(mysqlcomm, mysqlconn, stringaconnessione_corsi)
+            End If
+
+        Catch ex As Exception
+
+        Finally
+            mysqlconn.Close()
+            mysqlconn = Nothing
+        End Try
+
+        'STEP2 REGISTRA INFO PROFILO DAL MODULO NELLA TABELLA Anagrafica_Profilo
+        '2a Ottenere IdProfessione dalla tabella anagrafica_professioni
+        Dim gestioneprofilo As GestioneProfilo
+        gestioneprofilo = New GestioneProfilo()
+
+        Try
+            mysqlconn = New MySqlConnection()
+            mysqlcomm = New MySqlCommand()
+            mysqlconn.ConnectionString = stringaconnessione_corsi
+            mysqlcomm.CommandText = "Select * from Anagrafica_Professioni where Descrizione='"
+            mysqlcomm.Connection = mysqlconn
+
+            'ottieni Id Professione
+            If (gna.Checked = True) Then
+                gestioneprofilo.IdProfessione = gestioneprofilo.OttieniIdProfessione(gna.Text, mysqlconn, mysqlcomm)
+                mysqlconn.Close()
+            End If
+            If (mininterno_poliziastato.Checked) Then
+                mysqlcomm.CommandText = "Select * from Anagrafica_Professioni where Descrizione='"
+                gestioneprofilo.IdProfessione = gestioneprofilo.OttieniIdProfessione(mininterno_poliziastato.Text, mysqlconn, mysqlcomm)
+                mysqlconn.Close()
+            End If
+            If (mindifesa_carabinieri.Checked) Then
+                mysqlcomm.CommandText = "Select * from Anagrafica_Professioni where Descrizione='"
+                gestioneprofilo.IdProfessione = gestioneprofilo.OttieniIdProfessione(mindifesa_carabinieri.Text, mysqlconn, mysqlcomm)
+                mysqlconn.Close()
+            End If
+            If (minfinanze_guardiafinanza.Checked) Then
+                mysqlcomm.CommandText = "Select * from Anagrafica_Professioni where Descrizione='"
+                gestioneprofilo.IdProfessione = gestioneprofilo.OttieniIdProfessione(minfinanze_guardiafinanza.Text, mysqlconn, mysqlcomm)
+                mysqlconn.Close()
+            End If
+            If (PCDM_protezionecivile.Checked) Then
+                mysqlcomm.CommandText = "Select * from Anagrafica_Professioni where Descrizione='"
+                gestioneprofilo.IdProfessione = gestioneprofilo.OttieniIdProfessione(PCDM_protezionecivile.Text, mysqlconn, mysqlcomm)
+                mysqlconn.Close()
+            End If
+            If (vigilifuoco.Checked) Then
+                mysqlcomm.CommandText = "Select * from Anagrafica_Professioni where Descrizione='"
+                gestioneprofilo.IdProfessione = gestioneprofilo.OttieniIdProfessione(vigilifuoco.Text, mysqlconn, mysqlcomm)
+                mysqlconn.Close()
+            End If
+            If (poliziamunicipale.Checked) Then
+                mysqlcomm.CommandText = "Select * from Anagrafica_Professioni where Descrizione='"
+                gestioneprofilo.IdProfessione = gestioneprofilo.OttieniIdProfessione(poliziamunicipale.Text, mysqlconn, mysqlcomm)
+                mysqlconn.Close()
+            End If
+            If (associazionepolstato.Checked) Then
+                mysqlcomm.CommandText = "Select * from Anagrafica_Professioni where Descrizione='"
+                gestioneprofilo.IdProfessione = gestioneprofilo.OttieniIdProfessione(associazionepolstato.Text, mysqlconn, mysqlcomm)
+                mysqlconn.Close()
+            End If
+            If (associazioneNazCarabinieri.Checked) Then
+                mysqlcomm.CommandText = "Select * from Anagrafica_Professioni where Descrizione='"
+                gestioneprofilo.IdProfessione = gestioneprofilo.OttieniIdProfessione(associazioneNazCarabinieri.Text, mysqlconn, mysqlcomm)
+                mysqlconn.Close()
+            End If
+            If (associazionenazfinanzieri.Checked) Then
+                mysqlcomm.CommandText = "Select * from Anagrafica_Professioni where Descrizione='"
+                gestioneprofilo.IdProfessione = gestioneprofilo.OttieniIdProfessione(associazionenazfinanzieri.Text, mysqlconn, mysqlcomm)
+                mysqlconn.Close()
+            End If
+            If (mingiustizia_poliziaPenitenziaria.Checked) Then
+                mysqlcomm.CommandText = "Select * from Anagrafica_Professioni where Descrizione='"
+                gestioneprofilo.IdProfessione = gestioneprofilo.OttieniIdProfessione(mingiustizia_poliziaPenitenziaria.Text, mysqlconn, mysqlcomm)
+                mysqlconn.Close()
+            End If
+            ''step 2b Salvataggio profilo.... e assegnazione IdProfilo nella tabella Utenti
+            gestioneprofilo.SalvaProfiloUtente(mysqlconn, mysqlcomm, gestioneutente.IdUtente)
+        Catch ex As Exception
+            Dim msg As String
+            msg = ex.Message
+        End Try
+
+
+		  Protected Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim pdf_edit_form As PdfReader
+        pdf_edit_form = New PdfReader("C:\Users\FRANCESCO-DEV\Source\Repos\GNA 2.0\GNAVBMForm\GNAVBMForm\Public\modellicorso\Modulo droni web.pdf")
+        'Dim name As Object = pdf_edit_form.AcroFields.GetField("GNA")
+
+        'pdf_edit_form.AcroFields.SetField("GNA", "Si")
+
+        Dim pdf_compilato As PdfStamper
+        pdf_compilato = New PdfStamper(pdf_edit_form, New System.IO.FileStream("C:\Users\FRANCESCO-DEV\Source\Repos\GNA 2.0\GNAVBMForm\GNAVBMForm\Public\Documenti\droni.pdf", System.IO.FileMode.Create))
+        'Dim o As Object = pdf_compilato.AcroFields.GetAppearanceStates("GNA")
+        'GNA- DA NON COMPILARE
+        Dim GNA As Boolean = False
+        If (GNA = False) Then
+            pdf_compilato.AcroFields.SetField("GNA", "Off")
+        End If
+        pdf_compilato.FormFlattening = False
+        pdf_compilato.Close()
+    End Sub

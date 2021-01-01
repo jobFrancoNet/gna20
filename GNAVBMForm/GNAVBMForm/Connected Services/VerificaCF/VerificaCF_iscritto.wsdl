@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="VerificaCodiceFiscaleIscritto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cf" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerificaCodiceFiscaleIscrittoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VerificaCodiceFiscaleIscrittoResult" type="tns:DTOUserSocio" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="DTOUserSocio">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="NOME" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="COGNOME" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CODICEFISCALE" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Matricola" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="email_srv" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="cellulare" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="VerificaCodiceFiscaleIscrittoSoapIn">
+    <wsdl:part name="parameters" element="tns:VerificaCodiceFiscaleIscritto" />
+  </wsdl:message>
+  <wsdl:message name="VerificaCodiceFiscaleIscrittoSoapOut">
+    <wsdl:part name="parameters" element="tns:VerificaCodiceFiscaleIscrittoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="VerificaCodiceFiscale_iscrittoSoap">
+    <wsdl:operation name="VerificaCodiceFiscaleIscritto">
+      <wsdl:input message="tns:VerificaCodiceFiscaleIscrittoSoapIn" />
+      <wsdl:output message="tns:VerificaCodiceFiscaleIscrittoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="VerificaCodiceFiscale_iscrittoSoap" type="tns:VerificaCodiceFiscale_iscrittoSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="VerificaCodiceFiscaleIscritto">
+      <soap:operation soapAction="http://tempuri.org/VerificaCodiceFiscaleIscritto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="VerificaCodiceFiscale_iscrittoSoap12" type="tns:VerificaCodiceFiscale_iscrittoSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="VerificaCodiceFiscaleIscritto">
+      <soap12:operation soapAction="http://tempuri.org/VerificaCodiceFiscaleIscritto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="VerificaCodiceFiscale_iscritto">
+    <wsdl:port name="VerificaCodiceFiscale_iscrittoSoap" binding="tns:VerificaCodiceFiscale_iscrittoSoap">
+      <soap:address location="http://localhost:65202/VerificaCF_iscritto.asmx" />
+    </wsdl:port>
+    <wsdl:port name="VerificaCodiceFiscale_iscrittoSoap12" binding="tns:VerificaCodiceFiscale_iscrittoSoap12">
+      <soap12:address location="http://localhost:65202/VerificaCF_iscritto.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

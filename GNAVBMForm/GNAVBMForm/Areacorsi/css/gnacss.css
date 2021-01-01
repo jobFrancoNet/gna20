@@ -1,0 +1,193 @@
+/* CSS Document */
+
+.testo1 {
+	font-family: Times New Roman, Times, serif;
+	font-size: 18px;
+	color: #0066FF;
+}
+
+.testo3 {
+	font-family: Times New Roman, Times, serif;
+	font-size: 22px;
+	color: #0066FF;
+	text-transform: uppercase;
+}
+
+.testo2 {
+	font-family: Times New Roman, Times, serif;
+	font-size: 14px;
+	color: #0066FF;
+}
+
+.pulsanti {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #0000CC;
+}
+
+.pulsanti2 {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 12px;
+	color: #000000;
+}
+
+A:LINK {
+ color: #0000CC;
+ text-decoration: none;
+}
+
+A:VISITED {
+ color: #0000CC;
+ text-decoration: none;
+}
+
+A:HOVER {
+ color: #0099CC;
+ text-decoration: none;
+}
+
+A:ACTIVE {
+ color: #0000FF ;
+ text-decoration: none;
+}
+
+.riga1 {
+	float: left;
+	width: 670px;
+	height: 20px;
+	left: 285px;
+}
+
+.colonna1 {
+	float: left;
+	width: 500px;
+	left: 0px;
+	font-family: Times New Roman, Times, serif;
+	font-size: 18px;
+	color: #0066FF;
+}
+.colonna2 {
+	float: left;
+	width: 450px;
+	left: 500px;
+	font-family: Times New Roman, Times, serif;
+	font-size: 18px;
+	color: #0066FF;
+}
+
+.colonna3 {
+	float: left;
+	width: 280px;
+	left: 0px;
+}
+
+.colonna3_4 {
+	float: left;
+	width: 10px;
+	left: 280px;
+}
+
+.colonna4 {
+	float: left;
+	width: 670px;
+	height: 210px;
+	left: 324px;
+	font-family: Times New Roman, Times, serif;
+	font-size: 20px;
+	color: #0066FF;
+	margin-bottom: 10px;
+}
+
+.colonna5 {
+	float: left;
+	width: 670px;
+	left: 0px;
+	font-family: Times New Roman, Times, serif;
+	font-size: 20px;
+	color: #0066FF;
+}
+
+.colonna5_6 {
+	float: left;
+	width: 10px;
+	left: 670px;
+	
+}
+
+.colonna6 {
+	float: left;
+	width: 280px;
+	left: 680px;
+	
+}
+
+.colonna7 {
+	float: left;
+	width: 2px;
+	left: 670px;
+	
+}
+
+.colonna8 {
+	float: left;
+	width: 2px;
+	height: 216px;
+	left: 280px;
+	
+}
+
+
+BODY {
+	font:normal 80% tahoma, verdana;
+	background-color:#fff;
+}
+
+.pager { 
+	background-color:#eee; 
+	border:#ccc 3px solid;
+	padding:3px;
+	text-align:center;
+	font:normal 12px verdana;
+}
+.lhead { 
+	background-color:#eee; 
+	border-top:#aaa 3px solid;
+	border-bottom:#aaa 3px solid;
+	padding:3px;
+	font:bold 14px verdana;
+}
+.lpart { 
+	background-color:#f0f0f0; 
+	border-left:#ccc 2px solid;
+	padding-bottom:25px;
+}
+.lpage { 
+	font:normal 12px verdana;
+}
+.lcount { 
+	background-color:#999; 
+	color:#fff;
+	padding:2px;
+	font:bold 12px verdana;
+}
+#copyright{
+	font:normal 11px tahoma,verdana;
+	color:#000;
+	text-align:center;
+	padding:0px;
+	width:720px;
+
+}
+
+hr {
+	color:#ccc;
+} 
+
+#immagine {
+	width: 70%;
+} 
+
+#immagine2 {
+	width: 25%;
+	height: 25%;
+} 

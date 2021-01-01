@@ -1,0 +1,321 @@
+
+
+html {  
+	background: url(../img/sfondo.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;	
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover; }
+
+@font-face {
+ font-family: Haettenschweiler;
+ src: url("haettenschweiler.eot") }
+
+@font-face {
+ font-family: Haettenschweiler;
+ src: url("haettenschweiler.ttf") }
+
+body {
+	margin: 0;
+	padding: 0;
+	color: #303030;
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 13px;
+	line-height: 17px; }
+
+a, a:link, a:visited { 
+	color: #000040;
+	font-weight: bold; 
+	text-decoration: none; }
+
+a:hover { color: #d4c439; }
+
+a img, img a, img { border: 0px solid; }
+
+img[usemap], map area { outline: none; }
+
+input { 
+	background-color: transparent; 
+	border: transparent; 
+	margin: auto; 
+	line-height: 25px !important;}
+
+input:focus { outline: none; }
+
+h1 {
+	margin: 5px 5px 20px 5px;
+	color: #7d7d7d;
+	height: 32px;
+	border-bottom: 1px dashed #a3a3a3; 
+    	font-family: Haettenschweiler, sans-serif;
+	font-weight: lighter !important;
+	font-size: 33px; }
+
+.border-radius { 
+  	border-radius: 15px; 
+  	-moz-border-radius: 15px; 
+  	-webkit-border-radius: 15px; }
+
+#wrap {
+	width: 960px;
+	margin: auto;
+	background: #e2e2e2; }
+
+#pagina {
+	width: 880px !important;
+	min-height: 400px;
+	overflow: hidden;
+	padding: 50px 40px 50px 40px !important;
+}
+
+#header { height: 215px; }
+
+
+#menu-box {
+	margin: 0 auto;
+	padding: 0;
+	width: 960px; }
+
+ul#menu {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	float:left;
+	width: 100%;
+	background-color: #000040; }
+
+ul#menu li {
+	margin: 0;
+	padding: 0;
+	float: left;
+	display: block;
+	text-align: center;
+	position: relative; }
+
+ul#menu li a {
+	float: left;
+	padding: 10px 10px;
+	color: #ffffff;
+	width: 117px;
+	text-decoration: none; }
+
+ul#menu li.last a { width: 118px !important; }
+
+ul#menu li a:hover {
+	background: #a3a3a3;
+	color: #ffffff; }
+
+ul#menu ul {
+	padding:0;
+	display: inline-block;
+	list-style: none;
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	top: 37px;
+	left: 0;
+	z-index: 9999;
+	background: #000040; }
+
+ul#menu li:hover ul {
+	opacity: 1;
+	visibility: visible; }
+
+ul#menu ul li {
+	float: none;
+	display: block;
+	border: 0; }
+
+ul#menu ul a {
+	width: 117px;
+	display: block;
+	white-space: nowrap;
+	float: none;
+	text-transform: none; }
+
+ul#menu ul a:hover {
+	background-color: #a3a3a3;
+	color: #ffffff; }
+
+#info-cookie {
+	border: 1px solid #a3a3a3;
+	width: 850px;
+    	height: auto;
+	padding: 15px;
+	margin-bottom: 30px;
+	margin-right: 15px; }
+
+#colonna-sx {
+	float: left;
+	background: transparent; }
+
+.box-colonna-sx {
+	border: 1px solid #a3a3a3;
+	width: 298px;
+	padding: 15px;
+	margin-bottom: 30px;
+	margin-right: 15px; }
+
+
+
+
+/* DA CANCELLARE */
+
+
+#news {
+	border: 1px solid #a3a3a3;
+	width: 298px;
+	padding: 15px;
+	margin-bottom: 30px;
+	margin-right: 15px; }
+
+#donazione {
+	border: 1px solid #a3a3a3;
+	width: 298px;
+	padding: 15px;
+	margin-bottom: 30px;
+	margin-right: 15px; }
+
+#cinquepermille {
+	border: 1px solid #a3a3a3;
+	width: 298px;
+	padding: 15px;
+	margin-bottom: 30px;
+	margin-right: 15px; }
+
+
+/* DA CANCELLARE - fine */
+
+
+
+
+
+.box-evidenza {
+	background-color: #a3a3a3;
+	color: #ffffff; }
+
+.box-evidenza h1 { 
+	color: #000040; 
+	border-bottom: 1px dashed #000040; }
+
+iframe#fb-plugin { margin-bottom: 20px; }
+
+#iscriviti {
+	border: 1px solid #a3a3a3;
+	width: 298px;
+	padding: 15px;
+	margin-bottom: 30px;
+	margin-right: 15px; }
+
+#casella-mail {
+	margin: 20px 0px 20px 5px;
+	border: 1px solid #a3a3a3;
+	height: 25px;
+	width: 95%; }
+
+#pulsante { 
+	margin-left: 76px !important; 
+	margin-bottom: 15px; }
+
+#contatore { 
+	border: 1px solid #a3a3a3;
+	width: 112px;
+	padding: 15px 107px 15px 107px;
+	margin-right: 15px; }
+
+#colonna-dx {
+	float: left;
+	background: transparent; }
+
+.box-colonna-dx  {
+	border: 1px solid #a3a3a3;
+	width: 488px;
+	padding: 15px;
+	margin-bottom: 30px;
+	margin-left: 15px; }
+
+
+
+
+/* DA CANCELLARE */
+
+
+#in-evidenza {
+	border: 1px solid #a3a3a3;
+	width: 488px;
+	padding: 15px;
+	margin-bottom: 30px;
+	margin-left: 15px; }
+
+#in-evidenza-testo { 
+	min-height: 265px;
+	background: url(../img/sfondo-logo.png) no-repeat top right !important; }
+
+
+/* DA CANCELLARE - fine */
+
+
+
+
+#news-testo { 
+	min-height: 265px;
+	background: url(../img/sfondo-logo.png) no-repeat top right !important; }
+
+
+#scopri-gna {
+	border: 1px solid #a3a3a3;
+	width: 488px;
+	padding: 15px;
+	margin-left: 15px;
+	margin-bottom: 30px; }
+
+#scopri-gna-testo { min-height: 445px; }
+
+#fade-uno {
+	float: left;
+	padding: 0; 
+	margin: 0px 15px 12px 0px;
+	width: 280px; 
+	height: 210px }
+
+#fade-due {
+	clear: left;
+	float: right;
+	padding: 0; 
+	margin: 12px 0px 0px 15px;
+	width: 280px; 
+	height: 210px }
+
+#controllo-tessere {
+	border: 1px solid #a3a3a3;
+	width: 488px;
+	padding: 15px;
+	margin-bottom: 30px;
+	margin-left: 15px; }
+
+#footer {
+	height: 340px;
+	background: #000040;
+	padding: 35px 0px 35px 0px;
+	color: #ffffff; }
+
+.footer-colonna { 
+	width: 270px; 
+	padding: 0px 0px 0px 50px;
+	float: left; }
+
+.footer-colonna a, .footer-colonna a:link, .footer-colonna a:visited { 
+	color: #ffffff;
+	font-weight: normal;
+	text-decoration: none;  }
+
+.footer-colonna a:hover { color: #d4c439; }
+
+.footer-colonna ul { list-style-type: none; }
+
+#casella-ricerca {
+	border: 1px solid #a3a3a3;
+	height: 25px;
+	width: 100%; }
+
+
