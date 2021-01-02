@@ -1303,6 +1303,7 @@
     <Content Include="Public\articoli\zzasino salvatopubblica.jpg" />
     <Content Include="Public\articoli\zzfamiglia salvata107.jpg" />
     <Content Include="Public\articoli\zzvalleifreda108.jpg" />
+    <Content Include="rassegna.aspx" />
     <Content Include="RecuperaPassword.aspx" />
     <Content Include="regsocio.aspx" />
     <Content Include="ric_socio.aspx" />
@@ -1692,6 +1693,13 @@
     </Compile>
     <Compile Include="OtpRequest_verifiedemail.aspx.vb">
       <DependentUpon>OtpRequest_verifiedemail.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="rassegna.aspx.designer.vb">
+      <DependentUpon>rassegna.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="rassegna.aspx.vb">
+      <DependentUpon>rassegna.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="RecuperaPassword.aspx.designer.vb">
